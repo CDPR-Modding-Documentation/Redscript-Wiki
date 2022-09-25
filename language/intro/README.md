@@ -11,4 +11,4 @@
 ### Useful resources
 
 * [VSCode extension with IDE features](https://github.com/jac3km4/redscript-ide-vscode)
-* [API documentation for in-game types](https://redscript.redmodding.org)
+* [API documentation for in-game types](https://jac3km4.github.io/cyberdoc)
