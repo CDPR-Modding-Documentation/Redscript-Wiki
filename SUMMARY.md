@@ -17,6 +17,7 @@
   * [Annotations](language/language-features/annotations.md)
   * [Modules](language/language-features/modules.md)
   * [Conditional compilation](language/language-features/conditional-compilation.md)
+  * [Configurable user action messages](language/language-features/configurable-user-action-messages.md)
 * [Built-in Types](language/native-types.md)
 * [Built-in Functions](language/built-in-functions/README.md)
   * [Logging](language/built-in-functions/logging.md)
