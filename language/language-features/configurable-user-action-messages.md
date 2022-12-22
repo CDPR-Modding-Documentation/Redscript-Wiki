@@ -1,6 +1,6 @@
 # Configurable user action messages
 
-REDscript supports custom user action messages through TOML configuration files under `r6/config/userActions/[unique-name].toml`. Mod authors can ship these with their mods and they will be picked up by the compiler and shown to users automatically.
+REDscript supports custom user action messages through TOML configuration files under `r6/config/userActions/[unique-name].toml`. Mod authors can ship these with their mods and they will be picked up by the compiler and shown to users in a popup automatically.
 
 ### How-to
 
@@ -22,9 +22,9 @@ Every error has a custom code (`UNRESOLVED_TYPE` and `UNRESOLVED_REF`in this cas
 
 ```
 [[UNRESOLVED_REF]]
-id = "MISSING_TWEAKXL2"
-message = "one of your mods depends on TweakXL, try installing it"
+id = "MISSING_TWEAKXL"
 span_starts_with = "TweakDBManager"
+message = "one of your mods depends on TweakXL, try installing it"
 
 [[UNRESOLVED_TYPE]]
 id = "MISSING_TWEAKXL"
@@ -36,9 +36,9 @@ message = "CraftingQualityOfLife depends on TweakXL, try installing it"
 The TOML file contains a list of action definitions, each one containg:
 
 * `[[ERROR_CODE]]` - the error code to match on (can be seen in the compiler output)
-* `id` - identifier of the user action, used to deduplicate them if more than one is matched (required)
-* `span_starts_with` or `line_contains`- string for matching on source code where the error originates from (required)
-  * `span_starts_with`only matches a prefix of the error span, the specific piece of code that caused the error, this is the more specific and preferred option
-  * `line_contains` searches the entire line where the error originated from, it's less specific and more powerful, but can more easily lead to false positives
-* `file` - relative path to the file where the error occurs, by default these matchers are global (optional)
+* `id` - identifier of the user action, which is used to deduplicate when several matches are made (required)
+* `span_starts_with` or `line_contains`- pattern for matching on source code that caused the error (required)
+  * `span_starts_with` matches on a prefix of the error span, the specific piece of code that caused the error, this is the more specific and preferred option
+  * `line_contains` searches the entire line where the error occured, it's less specific and more powerful, but can more easily lead to false positives
+* `file` - relative path to the file where the error originates from, by default these matchers are global (optional)
 * `message` - hint to be shown to the user when the error is matched successfully (required)
