@@ -33,7 +33,7 @@ line_contains = "extends ScriptableTweak"
 message = "CraftingQualityOfLife depends on TweakXL, try installing it"
 ```
 
-The TOML file contains a list of action definitions, each one containg:
+The TOML file contains a list of action definitions, each one containig:
 
 * `[[ERROR_CODE]]` - the error code to match on (can be found in the compiler output)
 * `id` - identifier of the user action, which is used to deduplicate them when several matches are made (required)
