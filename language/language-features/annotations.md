@@ -31,15 +31,14 @@ private func PopulateMenuItemList() {
 {% endcode %}
 
 {% hint style="info" %}
-When using the `wrappedMethod(...)` function to call the `PopulateMenuItemList()` function, make sure to pass the required arguments (or lack thereof) for the correct overload.
+When using the `wrappedMethod(...)` function to call the `PopulateMenuItemList()` function, pass the required arguments to invoke the correct overload.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```swift
 @wrapMethod(SingleplayerMenuGameController)
 private func PopulateMenuItemList() {
   let menuItemCount: Int32 = 5;
-  // passes menuItemCount as a parameter to the wrong overload - PopulateMenuItemList(count: Int32)
-  wrappedMethod(menuItemCount);
+  wrappedMethod(menuItemCount); // passes menuItemCount as a parameter to PopulateMenuItemList(count: Int32)
 }
 ```
 {% endcode %}
