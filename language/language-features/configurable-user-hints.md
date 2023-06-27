@@ -1,10 +1,10 @@
 # Configurable user hints
 
-REDscript supports custom user hint messages through TOML configuration files located at `r6/config/redsUserHints/[unique-name].toml`. Mod authors can ship these with their mods and they will be picked up by the compiler and shown to users in a popup automatically when an error occurs.
+As a mod developer, you can help the users of your mod fix common errors by adding hint messages. These messages are displayed by the REDscript compiler when the user gets an error while launching the game. The hints are configured using TOML files that are stored in the `r6/config/redsUserHints/` folder.
 
-### How-to
+### Example
 
-Given an example scenario where the user has a broken installation due to a missing TweakXL dependency, the compiler will output error logs like this:
+Suppose a user runs into compilation errors because they don’t have TweakXL installed. TweakXL is a mod that many other mods need, so this is a common problem. The compiler will generate errors like this:
 
 ```log
  [ERROR] [UNRESOLVED_TYPE] At ./r6/scripts/CraftingQualityOfLife/RandomQualityModsTweakDB.reds:41:1:
@@ -18,7 +18,7 @@ class ScriptableTweak not found
 unresolved reference TweakDBManager
 ```
 
-We can see error codes next to each error in the log (`UNRESOLVED_TYPE` and `UNRESOLVED_REF`in this case). These codes can be used to identify specific errors and provide useful hints to the user about the underlying problem (here they're missing a TweakXL dependency). This can be done by creating a TOML file at `r6/config/redsUserHints/[unique-name].toml`(the TOML file name can be anything as long as it's unique, it's not coupled to the mod):
+The text in brackets contains the error codes (`UNRESOLVED_TYPE` and `UNRESOLVED_REF`). We can match on these codes to tell the user to install TweakXL. To do that, we need to create a TOML file in `r6/config/redsUserHints/{unique-name}.toml`. The file name can be anything, as long as it doesn’t conflict with other mods. Here is what the file could look like:
 
 ```toml
 [[UNRESOLVED_REF]]
@@ -33,12 +33,12 @@ line_contains = "extends ScriptableTweak"
 message = "CraftingQualityOfLife depends on TweakXL, try installing it"
 ```
 
-The TOML file contains a list of hint definitions, each one containing:
+Each hint configuration consists of up to five parts:
 
-* `[[ERROR_CODE]]` - the error code to match on (can be found in the compiler output)
-* `id` - identifier of the user hint, which is used to deduplicate them when several matches are made (required)
-* `span_starts_with` or `line_contains`- string used for matching on source code that caused the error (required)
-  * `span_starts_with` matches on a prefix of the error span, the specific piece of code that caused the error, this is the more specific and preferred option
-  * `line_contains` searches the entire line where the error occured for a match, it's less specific and more powerful, but can more easily lead to false positives
-* `file` - relative path to the file where the error originates from, by default these matchers are global, so this can be used to restrict them to a specific file, if you're worried your match can lead to false positives in other files/mods (optional)
-* `message` - message to be shown to the user when the error is matched successfully (required)
+* `[[ERROR_CODE]]` - the code of the error you want to match (you can find it in the compiler output)
+* `id` - a name for the hint, which is used to avoid showing the same hint more than once (required)
+* `span_starts_with` or `line_contains` - a pattern used to match the code that caused the error (required)
+  * `span_starts_with` looks for a specific piece of code at the exact line and column where the error happened, which allows for a very precise match
+  * `line_contains` looks for a match anywhere in the line where the error happened, this is more flexible, but can also match things you don’t want
+* `file` - the path to the file where the error came from, by default these hints apply to all files, so you can use this to limit them to a specific file, if you think your hint might match something else in another file or mod (optional)
+* `message` - the message that you want to show to the user when the error matches (required)
