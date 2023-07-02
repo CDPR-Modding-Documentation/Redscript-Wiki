@@ -10,7 +10,7 @@ You can organize your REDscript code into modules, which are separate files that
 module MyMod.Utils
 ```
 
-The module name can consist of any number of identifiers joined by dots. Each module has its own namespace, which means that you can only use the names you define in it inside that module, unless you make them public and import them in another file. This also prevents name clashes with other scripts in the game, so you can reuse any name you want.
+A module name is a series of identifiers separated by dots. Each module has its own namespace and its items are not visible outside of the module unless you declare them as public and import them in another file. This helps you structure your code and avoids name conflicts with existing game scripts, so you can use any name without overriding in-game definitions.
 
 If you do not include a module header at the beginning of your file, your code will be in the global scope and implicitly visible everywhere.
 
