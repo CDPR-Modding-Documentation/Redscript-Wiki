@@ -1,44 +1,44 @@
 ---
 description: >-
-  The compiler supports a number of annotations. Their main purpose is to
-  add/modify functionality for methods and classes in the base game only. You
-  cannot annotate methods or classes from mods.
+  Annotations are special keywords that you can use to change or extend the
+  behavior of existing methods and classes in the base game. You cannot use
+  annotations to modify modded methods or classes.
 ---
 
 # Annotations
 
 ### @wrapMethod(class)
 
-This annotation needs to be followed by a function definition with a signature matching some existing in-game method. Your function will effectively 'wrap' the existing method on the specified class, i.e. whenever the original method is invoked, your function will be executed instead - but it's your function's responsibility to invoke the method being wrapped, which you can do by using the special `wrappedMethod` identifier. You can invoke it by forwarding the original arguments or change them however you wish. On top of that, this annotation allows chaining of these wrappers and incrementally adding functionality to existing methods. This makes it relatively easy to keep mods compatible even when they modify the same methods.
+You can use this annotation to write a new function that supersedes an existing method with the same name and parameters on a specified class. Your function will execute instead of the original method whenever it is invoked, but you can still access the underlying method by using the `wrappedMethod(…)` identifier. You would typically invoke the wrapped method and forward all the arguments unchanged, but you can also modify the arguments or the final return value if you wish. Furthermore, this annotation can be applied multiple times to chain multiple functions that modify the same method. Each function in the chain wraps around the previous one. This helps to keep mods compatible even if they alter the same methods. For example, multiple mods can use this annotation to append new buttons to the main menu:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```swift
 @wrapMethod(SingleplayerMenuGameController)
 private func PopulateMenuItemList() {
-  wrappedMethod(); // this will call the original PopulateMenuItemList
+  wrappedMethod(); // This will call the original PopulateMenuItemList
   this.AddMenuItem("BUTTON 1", n"OnDebug");
 }
 
-// you can chain them - this function will wrap around the previous wrapper
+// You can use this annotation to chain multiple functions
 @wrapMethod(SingleplayerMenuGameController)
 private func PopulateMenuItemList() {
-  wrappedMethod(); // this will call the previous wrapper
+  wrappedMethod(); // This will run the previous function with this annotation
   this.AddMenuItem("BUTTON 2", n"OnDebug");
 }
 
-// we'll end up with BUTTON 1 and BUTTON 2 added to the main menu
+​// The result will be two new buttons added to the main menu
 ```
 {% endcode %}
 
 {% hint style="info" %}
-When using the `wrappedMethod(...)` function to call the `PopulateMenuItemList()` function, make sure to pass the required arguments (or lack thereof) for the correct overload.
+When you use `wrappedMethod(…)` to call the original method, make sure to match the arguments for the correct overload of the method.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```swift
 @wrapMethod(SingleplayerMenuGameController)
 private func PopulateMenuItemList() {
   let menuItemCount: Int32 = 5;
-  // passes menuItemCount as a parameter to the wrong overload - PopulateMenuItemList(count: Int32)
+  // this will pass menuItemCount as an argument to the wrong overload of PopulateMenuItemList
   wrappedMethod(menuItemCount);
 }
 ```
@@ -46,7 +46,7 @@ private func PopulateMenuItemList() {
 {% endhint %}
 
 {% hint style="info" %}
-An invocation of `wrappedMethod(...)` should generally be present in a well-defined `@wrapMethod` function. However, you have the option to encapsulate it with a conditional statement where it is only invoked when certain criteria have been met.
+You should usually call `wrappedMethod(…)` in your wrapper function. However, you can use a conditional statement to decide when to call it if you don’t need it in some situations.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```swift
@@ -54,7 +54,7 @@ An invocation of `wrappedMethod(...)` should generally be present in a well-defi
 private func PopulateMenuItemList() {
   let menuItemCount: Int32 = 5;
   if menuItemCount > 5 {
-    wrappedMethod(menuItemCount); // wrappedMethod(...) is not invoked because the conditional 'if' statement doesn't return true
+    wrappedMethod(menuItemCount); // wrappedMethod(…) will not run because menuItemCount is not greater than 5
   };
 }
 ```
@@ -63,7 +63,7 @@ private func PopulateMenuItemList() {
 
 ### @addMethod(class)
 
-This annotation will add your newly defined method to the specified class.
+You can use this annotation to create a new method and add it to an existing class. For example, you can write a new method to disassemble all junk items in your backpack and add it to the `BackpackMainGameController` class:
 
 <pre class="language-swift" data-overflow="wrap" data-line-numbers><code class="lang-swift">@addMethod(BackpackMainGameController)
 private final func DisassembleAllJunkItems() {
@@ -73,7 +73,7 @@ private final func DisassembleAllJunkItems() {
 
 ### @replaceMethod(class)
 
-This annotation needs to be followed by a function definition with a signature matching some existing in-game method. Your function will effectively replace the existing method.
+You can use this annotation to write a new function that has the same name and parameters as an existing method in the game. Your function will replace the original method and change its behavior.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```swift
@@ -85,16 +85,16 @@ private final func ProcessCraftSkill(xpAmount: Int32, craftedItem: StatsObjectID
 {% endcode %}
 
 {% hint style="info" %}
-If there is more than one @replaceMethod defined for a single method it will lead to only one of them taking effect. If you want to be able to combine multiple modifications you should check the @wrapMethod annotation.
+You can only use one `@replaceMethod` for each method. If you define more than one, only one of them will work. If you want to combine multiple changes to the same method, you should use the `@wrapMethod` annotation instead.
 {% endhint %}
 
 {% hint style="info" %}
-This annotation **is compatible** with @wrapMethod. It will always replace the original method and it does not affect the wrappers.
+This annotation is compatible with `@wrapMethod`. It will always overwrite the original method and it will not affect the functions that wrap around it.
 {% endhint %}
 
 ### @replaceGlobal()
 
-This annotation needs to be followed by a function definition with a signature matching some existing in-game global function. The matching function will be replaced with yours.
+You can use this annotation to write a new function that has the same name and parameters as an existing global function in the game. Your function will replace the original function and change its behavior.
 
 <pre class="language-swift" data-overflow="wrap" data-line-numbers><code class="lang-swift">@replaceGlobal()
 public static func CreateExpEvent(amount: Int32, type: gamedataProficiencyType) -> ref&#x3C;ExperiencePointsEvent> {
@@ -108,7 +108,7 @@ This is known not to work for some native functions.
 
 ### @addField(class)
 
-This annotation needs to be followed by a field definition that will be added to the target class.
+You can use this annotation to create a new field and add it to an existing class. For example, you can add a dummy field of type `Int32` to the `PlayerPuppet` class:
 
 {% code overflow="wrap" %}
 ```swift
