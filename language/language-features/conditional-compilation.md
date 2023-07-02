@@ -1,16 +1,17 @@
 # Conditional compilation
 
-REDscript supports conditional compilation, which can be used to handle complex cases of conflicting functionality between different modules. It allows you to compile different versions of your code based on some information that is available to the compiler. It's achieved through the use of a special @if annotation on top-level declarations and imports.
+Conditional compilation lets you write code that adapts to statically known information like presence or absence of other mods. For example, you might want to use a feature from another mod, but only if the user has that mod installed. Or you might want to avoid a conflict with another mod by changing your code depending on whether that mod is present or not.
+
+To use conditional compilation, you need to use the `@if` annotation followed by a condition before the code that you want to include or skip. Here’s a simple example:
 
 ```swift
 module My.Mod
-// conditional import
-// it'll be available only when the module is present
+// This line will only import Other.Mod if it exists
 @if(ModuleExists("Other.Mod"))
 import Other.Mod.*
 
-// you can write two different versions of a function based on existence of another module
-// imports from Other.Mod will be available only in the first version, since the import was conditional
+// This function has two versions: one for when Other.Mod exists and one for when it doesn't
+// The imports from Other.Mod are only valid in the first version, because they depend on the condition
 @if(ModuleExists("Other.Mod"))
 func Testing() -> Int32 {
     return 1;
@@ -20,7 +21,7 @@ func Testing() -> Int32 {
     return 2;
 }
 
-// you can also conditionally define a method wrapper/replacement
+// This method wrapper/replacement only take effect if Other.Mod doesn't exist
 @if(!ModuleExists("Other.Mod"))
 @wrapMethod(PlayerPuppet)
 protected cb func OnGameAttached() -> Bool {
@@ -29,8 +30,8 @@ protected cb func OnGameAttached() -> Bool {
 }
 ```
 
-Only a small subset of REDscript is allowed in the condition of the @if annotation. You can only use:
+The condition in the `@if` annotation can only consist of:
 
-* Boolean constants (`true`, `false`)
-* Standard boolean operators (`&&`, `||`, `!`, `?:`)
-* The `ModuleExists` function which determines whether the given module exists at compile time
+* `true` or `false`
+* logical operators (&&, ||, !, ?:)
+* the `ModuleExists` function, which returns true if a mod name exists and false otherwise
