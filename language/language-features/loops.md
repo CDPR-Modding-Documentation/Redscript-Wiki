@@ -1,10 +1,10 @@
 # Loops
 
-REDscript supports two kinds of loops: `while` and `for..in` loops.
+REDscript supports two types of loops: `while` and `for..in`.
 
 ### while
 
-The `while` statement works the same way it does in most languages. It allows you to execute a block of code multiple times based on a conditional expression.
+You can use the `while` statement to repeatedly execute a block of code as long as a condition is true. This is similar to how it works in many other languages. For example, you can use a while loop to print each element of an array:
 
 ```swift
 let i = 0;
@@ -20,7 +20,7 @@ while i < ArraySize(array) {
 
 ### for..in
 
-The `for..in` loop allows you to iterate over all elements of an array.
+You can use the `for..in` statement to iterate through all the elements of an array one by one. It's often cleaner than using an explicit `while` loop:
 
 ```swift
 let array = ["a", "b", "c"];
