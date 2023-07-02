@@ -4,17 +4,17 @@ description: Introduction to modules.
 
 # Modules
 
-Every REDscript file can optionally start with a module header:
+You can organize your REDscript code into modules, which are separate files that start with a line like this:
 
 ```haskell
 module MyMod.Utils
 ```
 
-The module name can be any chain of identifiers separated by dots. All the definitions in the module will be placed in it's own namespace and they won't be visible from other modules unless they're both public and explicitly imported. They also won't conflict with other names in the game, so you can even re-use the same names.
+The module name can have any number of words joined by dots. Each module has its own namespace, which means that you can only use the names you define in it inside that module, unless you make them public and import them in another file. This also prevents name clashes with other scripts in the game, so you can reuse any name you want.
 
-If you do not include a module header all your definitions will be placed in the global scope and made visible everywhere.
+If you do not include a module header at the beginning of your file, your code will be in the global scope and implicitly visible everywhere.
 
-Here's an example module:
+Here is an example of a module:
 
 ```swift
 module Math.Constants
@@ -23,10 +23,10 @@ public func Pi() -> Float = 3.14159
 public func E() -> Float = 2.71828
 ```
 
-This module can then be used in other files:
+This module has two public functions that return math constants. You can use them in another file by importing them and calling them by name like this:
 
 ```swift
-// Some codemodule MyMod
+// In another file
 import Math.Constants.Pi
 
 class Circle {
@@ -38,7 +38,7 @@ class Circle {
 }
 ```
 
-There are also other ways to import symbols from a module:
+There are different ways to import symbols from a module:
 
-* `import Math.Constants.*` will import all public symbols (`Pi` and `E` in this case).
-* `import Math.Constants.{Pi, E}` will explicitly import symbols `Pi` and `E`.
+* `import Math.Constants.*` will import all public symbols (both `Pi` and `E` in this case)
+* `import Math.Constants.{Pi, E}` will only import the symbols you specify (`Pi` and `E` in this case)
