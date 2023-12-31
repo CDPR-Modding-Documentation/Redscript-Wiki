@@ -39,6 +39,7 @@ Do not package this file with your mod though because that would lead to conflic
 ```swift
 @wrapMethod(EquipmentSystemPlayerData)
 func OnRestored() -> Void {
-    LogChannel(n"DEBUG", "Player Initialized");
+    wrappedMethod(); // call the original function
+    LogChannel(n"DEBUG", "Player Initialized"); // create a log output
 }
 ```
