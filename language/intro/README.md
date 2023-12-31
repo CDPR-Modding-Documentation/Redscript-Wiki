@@ -2,13 +2,15 @@
 
 ### Quick ways to get started with REDscript
 
+* Read on [setting-up-redscript-and-vscode.md](../../getting-started/setting-up-redscript-and-vscode.md "mention") ( [VSCode extension with IDE features](https://github.com/jac3km4/redscript-ide-vscode))
 * Check out [redscript-in-2-minutes.md](redscript-in-2-minutes.md "mention")
-* Read [the decompiled game code](https://codeberg.org/adamsmasher/cyberpunk)
 * Look up[ example game patches](https://github.com/jac3km4/redscript/blob/master/resources/patches.reds)
+* Learn [how-to-create-a-hook.md](how-to-create-a-hook.md "mention") (copied from [GitHub's Discussion page](https://github.com/jac3km4/redscript/discussions/66))
 * Read other pages of this wiki!
-* Another comprehensive introduction can be found in the [GitHub's Discussion page](https://github.com/jac3km4/redscript/discussions/66)
 
 ### Useful resources
 
-* [VSCode extension with IDE features](https://github.com/jac3km4/redscript-ide-vscode)
-* [API documentation for in-game types](https://jac3km4.github.io/cyberdoc)
+* [API documentation for in-game types](https://jac3km4.github.io/cyberdoc): A searchable compendium including native functions, classes, etc. For more detailed information, check out the database link below.
+* [Decompiled game code](https://codeberg.org/adamsmasher/cyberpunk): Game functions as a zip
+*   [Native database](https://nativedb.red4ext.com/): Classes, enums, and bitfields, searchable by text. Functions and fields are included, but can't be searched. You might find more info here than in the API documentation alone!
+

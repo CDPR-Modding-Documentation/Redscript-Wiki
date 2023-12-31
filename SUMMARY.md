@@ -5,11 +5,13 @@
 ## Getting Started
 
 * [Downloads](getting-started/downloads.md)
+* [Setting up Redscript and VSCode](getting-started/setting-up-redscript-and-vscode.md)
 
 ## Language
 
 * [Intro](language/intro/README.md)
   * [REDscript in 2 minutes](language/intro/redscript-in-2-minutes.md)
+  * [How to create a hook](language/intro/how-to-create-a-hook.md)
 * [Language Features](language/language-features/README.md)
   * [Intrinsics](language/language-features/intrinsics.md)
   * [Loops](language/language-features/loops.md)
