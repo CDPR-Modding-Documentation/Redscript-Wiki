@@ -50,9 +50,9 @@ You can now put your redscript mods into `Cyberpunk 2077\r6\scripts` and they wi
 
 <figure><img src="../.gitbook/assets/setup_redscript_configure" alt=""><figcaption></figcaption></figure>
 
-8. Set up the paths to your cyberpunk install. The first field needs the [Cyberpunk 2077](#user-content-fn-2)[^2] directory, the second one the `final.redscripts.bk` file in `r6\cache`:
+8. Set up the path to your cyberpunk install in VS Code preferences.
 
-<figure><img src="../.gitbook/assets/setup_redscript_vscode_configure_paths" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-12-31 165919.png" alt=""><figcaption></figcaption></figure>
 
 9. Save the settings and close VSCode
 
@@ -88,5 +88,3 @@ let testField: Bool;
 If you want to make a redscript mod, you can check out [how-to-create-a-hook.md](../language/intro/how-to-create-a-hook.md "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
 
 [^1]: The place where you installed the game. You can get there by selecting "Browse Local Files" (or the equivalent option) in Steam/Epic/GOG.
-
-[^2]: The place where you installed the game. You can get there by selecting "Browse Local Files" (or the equivalent option) in Steam/Epic/GOG.
