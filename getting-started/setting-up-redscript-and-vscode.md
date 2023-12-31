@@ -45,7 +45,8 @@ You can now put your redscript mods into `Cyberpunk 2077\r6\scripts` and they wi
 <figure><img src="../.gitbook/assets/setup_redscript_install_vsix" alt=""><figcaption></figcaption></figure>
 
 6. Navigate the file picker to your downloads folder and install the file from step 4.
-7. Your extension manager will now show both addons as installed. Click on the cog nmenu next to redscript-ide-vscode:
+7. Your extension manager will now show both addons as installed. **If it does not,** restart VSCode.
+8. Click on the cog menu next to redscript-ide-vscode:
 
 <figure><img src="../.gitbook/assets/setup_redscript_configure" alt=""><figcaption></figcaption></figure>
 
