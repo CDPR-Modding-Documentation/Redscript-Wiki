@@ -74,4 +74,16 @@ private final func DisassembleAllJunkItems() -> Void {
   // some methods require CName literals, they need to be prefixed with the n letter
   this.PlaySound(n"Item", n"OnBuy");
 }
+
+// you can trigger calls when game functions are called
+@wrapMethod(CraftingSystem)
+private final func ProcessCraftSkill(xpAmount: Int32, craftedItem: StatsObjectID) {
+  // this calls the original function. Don't omit this - use replaceMethod instead!
+  wrappedMethod(xpAmount, craftedItem);
+  
+  // you can now do your own stuff. 
+  // Or even do your own stuff _first_, modify the parameters passed to the
+  // original call.
+}
+
 ```
