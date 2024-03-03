@@ -6,38 +6,19 @@ description: Built-in types available in the game runtime.
 
 ## Logical Types
 
-| Keyword | Type               | Values          |
-| :-----: | ------------------ | --------------- |
-|  `Bool` | Boolean logic type | `true`  `false` |
+<table data-header-hidden><thead><tr><th width="155.33333333333331" align="center">Keyword</th><th width="206">Type</th><th>Values</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td><td>Values</td></tr><tr><td align="center"><code>Bool</code></td><td>Boolean logic type</td><td><code>true</code>  <code>false</code></td></tr></tbody></table>
 
 ## Integer Types
 
-|  Keyword | Type                    | Range                                                       |
-| :------: | ----------------------- | ----------------------------------------------------------- |
-|  `Int8`  | 8-bit Signed Integer    | `-128` to `127`                                             |
-|  `Uint8` | 8-bit Unsigned Integer  | `0` to `255`                                                |
-|  `Int16` | 16-bit Signed Integer   | `-32,768` to `32,767`                                       |
-| `Uint16` | 16-bit Unsigned Integer | `0` to `65,535`                                             |
-|  `Int32` | 32-bit Signed Integer   | `−2,147,483,648` to `2,147,483,647`                         |
-| `Uint32` | 32-bit Unsigned Integer | `0` to `4,294,967,295`                                      |
-|  `Int64` | 64-bit Signed Integer   | `−9,223,372,036,854,775,808` to `9,223,372,036,854,775,807` |
-| `Uint64` | 64-bit Unsigned Integer | `0` to `18,446,744,073,709,551,615`                         |
+<table data-header-hidden><thead><tr><th width="155" align="center">Keyword</th><th width="207">Type</th><th width="195">Range</th><th>Example</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td><td>Range</td><td>Example</td></tr><tr><td align="center"><code>Int8</code></td><td>8-bit Signed Integer</td><td><code>-128</code> to <code>127</code></td><td><code>let a: Int8 = 161</code></td></tr><tr><td align="center"><code>Uint8</code></td><td>8-bit Unsigned Integer</td><td><code>0</code> to <code>255</code></td><td><code>let a: Uint8 = 161u</code></td></tr><tr><td align="center"><code>Int16</code></td><td>16-bit Signed Integer</td><td><code>-32,768</code> to <code>32,767</code></td><td><code>let a: Int16 = 161</code></td></tr><tr><td align="center"><code>Uint16</code></td><td>16-bit Unsigned Integer</td><td><code>0</code> to <code>65,535</code></td><td><code>let a: Uint16 = 161u</code></td></tr><tr><td align="center"><code>Int32</code></td><td>32-bit Signed Integer</td><td><code>−2,147,483,648</code> to <code>2,147,483,647</code></td><td><code>let a: Int32 = 161</code></td></tr><tr><td align="center"><code>Uint32</code></td><td>32-bit Unsigned Integer</td><td><code>0</code> to <code>4,294,967,295</code></td><td><code>let a: Uint32 = 161u</code></td></tr><tr><td align="center"><code>Int64</code></td><td>64-bit Signed Integer</td><td><code>−9,223,372,036,854,775,808</code> to <code>9,223,372,036,854,775,807</code></td><td><code>let a: Int64 = 161l</code></td></tr><tr><td align="center"><code>Uint64</code></td><td>64-bit Unsigned Integer</td><td><code>0</code> to <code>18,446,744,073,709,551,615</code></td><td><code>let a: Uint64 = 161ul</code></td></tr></tbody></table>
 
 ## Floating-Point Types
 
-| Keyword  | Type                    | Range                                                                                                                  |
-| -------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `Float`  | 32-bit Single-Precision | 6-9 significant decimal digits ([more info](https://en.wikipedia.org/wiki/Single-precision\_floating-point\_format))   |
-| `Double` | 64-bit Double-Precision | 15-17 significant decimal digits ([more info](https://en.wikipedia.org/wiki/Double-precision\_floating-point\_format)) |
+<table data-header-hidden><thead><tr><th width="155.33333333333331">Keyword</th><th width="207">Type</th><th>Range</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Range</td></tr><tr><td><code>Float</code></td><td>32-bit Single-Precision</td><td>6-9 significant decimal digits (<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">more info</a>)</td></tr><tr><td><code>Double</code></td><td>64-bit Double-Precision</td><td>15-17 significant decimal digits (<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">more info</a>)</td></tr></tbody></table>
 
 ## Literal Types
 
-| Keyword     | Type                        | Prefix | Example                            |
-| ----------- | --------------------------- | ------ | ---------------------------------- |
-| `String`    | Mutable character string    |        | `"Hello world"`                    |
-| `CName`     | Non-mutable string constant | `n`    | `n"VehicleComponent"`              |
-| `ResRef`    | Resource reference path     | `r`    | `r"base\\anim_cooked.cookedanims"` |
-| `TweakDBID` | TweakDB Record ID           | `t`    | `t"Items.RequiredItemStats"`       |
+<table data-header-hidden><thead><tr><th width="155">Keyword</th><th width="207">Type</th><th width="81">Prefix</th><th>Example</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Prefix</td><td>Example</td></tr><tr><td><code>String</code></td><td>Mutable character string</td><td></td><td><code>"Hello world"</code></td></tr><tr><td><code>CName</code></td><td>Non-mutable string constant</td><td><code>n</code></td><td><code>n"VehicleComponent"</code></td></tr><tr><td><code>ResRef</code></td><td>Resource reference path</td><td><code>r</code></td><td><code>r"base\\anim_cooked.cookedanims"</code></td></tr><tr><td><code>TweakDBID</code></td><td>TweakDB Record ID</td><td><code>t</code></td><td><code>t"Items.RequiredItemStats"</code></td></tr></tbody></table>
 
 `String` values are stored internally as a null-terminated character array, unfortunately the bytecode doesn't support accessing the individual characters as an array.
 
@@ -49,9 +30,7 @@ description: Built-in types available in the game runtime.
 
 ## Other Types
 
-|  Keyword  | Type                                         |
-| :-------: | -------------------------------------------- |
-| `Variant` | A dynamic type that can store any other type |
+<table data-header-hidden><thead><tr><th width="155" align="center">Keyword</th><th>Type</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td></tr><tr><td align="center"><code>Variant</code></td><td>A dynamic type that can store any other type</td></tr></tbody></table>
 
 ## Operators
 
@@ -59,40 +38,7 @@ The RED4 scripting runtime implements most operators as native functions. Only t
 
 This table lists the available operators (in precedence block order) and what types support them.
 
-| Type                  | Symbol | Logical | Integer | Float | String | CName | TweakDBID |
-| --------------------- | :----: | :-----: | :-----: | :---: | :----: | :---: | :-------: |
-| Negate                |   `-`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Logical Not           |   `!`  |    ✓    |    -    |   -   |    -   |   -   |     ✓¹    |
-| Bitwise Not           |   `~`  |    -    |    ✓    |   -   |    -   |   -   |     -     |
-|                       |        |         |         |       |        |       |           |
-| Multiplication        |   `*`  |    -    |    ✓    |   ✓   |   ✓²   |   -   |     -     |
-| Division              |   `/`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Modulo                |   `%`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-|                       |        |         |         |       |        |       |           |
-| Addition              |   `+`  |    -    |    ✓    |   ✓   |   ✓³   |   ✓⁴  |     ✓⁴    |
-| Subtraction           |   `-`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-|                       |        |         |         |       |        |       |           |
-| Less Than             |   `<`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Less Than or Equal    |  `<=`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Greater Than          |   `>`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Greater Than or Equal |  `>=`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-|                       |        |         |         |       |        |       |           |
-| Equals                |  `==`  |    ✓    |    ✓    |   ✓   |    ✓   |   ✓⁵  |     ✓     |
-| Not Equals            |  `!=`  |    ✓    |    ✓    |   ✓   |    ✓   |   ✓⁵  |     ✓     |
-|                       |        |         |         |       |        |       |           |
-| Logical And           |  `&&`  |    ✓    |    -    |   -   |    -   |   -   |     -     |
-| Logical Or            | `\|\|` |    ✓    |    -    |   -   |    -   |   -   |     -     |
-| Bitwise And           |   `&`  |    -    |    ✓    |   -   |    -   |   -   |     -     |
-| Bitwise Or            |  `\|`  |    -    |    ✓    |   -   |    -   |   -   |     -     |
-| Bitwise Xor           |   `^`  |    -    |    ✓    |   -   |    -   |   -   |     -     |
-|                       |        |         |         |       |        |       |           |
-| Assign                |   `=`  |    ✓    |    ✓    |   ✓   |    ✓   |   ✓   |     ✓     |
-| Assign Add            |  `+=`  |    -    |    ✓    |   ✓   |    ✓   |   -   |     ✓     |
-| Assign Subtract       |  `-=`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Assign Multiply       |  `*=`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Assign Divide         |  `/=`  |    -    |    ✓    |   ✓   |    -   |   -   |     -     |
-| Assign Bitwise And    |  `&=`  |    -    |    ✓    |   -   |    -   |   -   |     -     |
-| Assign Bitwise Or     |  `\|=` |    -    |    ✓    |   -   |    -   |   -   |     -     |
+<table data-header-hidden><thead><tr><th width="188">Type</th><th align="center">Symbol</th><th align="center">Logical</th><th align="center">Integer</th><th align="center">Float</th><th align="center">String</th><th align="center">CName</th><th align="center">TweakDBID</th></tr></thead><tbody><tr><td>Type</td><td align="center">Symbol</td><td align="center">Logical</td><td align="center">Integer</td><td align="center">Float</td><td align="center">String</td><td align="center">CName</td><td align="center">TweakDBID</td></tr><tr><td>Negate</td><td align="center"><code>-</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Logical Not</td><td align="center"><code>!</code></td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">✓¹</td></tr><tr><td>Bitwise Not</td><td align="center"><code>~</code></td><td align="center">-</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td>Multiplication</td><td align="center"><code>*</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓²</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Division</td><td align="center"><code>/</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Modulo</td><td align="center"><code>%</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td>Addition</td><td align="center"><code>+</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓³</td><td align="center">✓⁴</td><td align="center">✓⁴</td></tr><tr><td>Subtraction</td><td align="center"><code>-</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td>Less Than</td><td align="center"><code>&#x3C;</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Less Than or Equal</td><td align="center"><code>&#x3C;=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Greater Than</td><td align="center"><code>></code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Greater Than or Equal</td><td align="center"><code>>=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td>Equals</td><td align="center"><code>==</code></td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓⁵</td><td align="center">✓</td></tr><tr><td>Not Equals</td><td align="center"><code>!=</code></td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓⁵</td><td align="center">✓</td></tr><tr><td></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td>Logical And</td><td align="center"><code>&#x26;&#x26;</code></td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Logical Or</td><td align="center"><code>||</code></td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Bitwise And</td><td align="center"><code>&#x26;</code></td><td align="center">-</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Bitwise Or</td><td align="center"><code>|</code></td><td align="center">-</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Bitwise Xor</td><td align="center"><code>^</code></td><td align="center">-</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td>Assign</td><td align="center"><code>=</code></td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr><tr><td>Assign Add</td><td align="center"><code>+=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">✓</td></tr><tr><td>Assign Subtract</td><td align="center"><code>-=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Assign Multiply</td><td align="center"><code>*=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Assign Divide</td><td align="center"><code>/=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Assign Bitwise And</td><td align="center"><code>&#x26;=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td>Assign Bitwise Or</td><td align="center"><code>|=</code></td><td align="center">-</td><td align="center">✓</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr></tbody></table>
 
 ### Notes
 
