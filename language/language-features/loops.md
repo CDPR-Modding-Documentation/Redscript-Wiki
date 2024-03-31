@@ -2,6 +2,10 @@
 
 REDscript supports two types of loops: `while` and `for..in`.
 
+{% hint style="info" %}
+Unlike Swift, REDScript does not support `continue`. If you want to skip a loop, you need to execute it in a function and `return`.
+{% endhint %}
+
 ### while
 
 You can use the `while` statement to repeatedly execute a block of code as long as a condition is true. This is similar to how it works in many other languages. For example, you can use a while loop to print each element of an array:

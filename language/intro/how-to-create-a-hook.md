@@ -9,7 +9,7 @@ Created by [HJHughJanus](https://github.com/HJHughJanus) on github, copied here 
 Injecting your code without altering anything existing works via wrapping.\
 Once you‘re sure what you want to do, you need to find out which system and which function within that system handles something close to your goal and then use this function as a wrapper function for your code.
 
-#### **Example**
+## **Example**
 
 _**Goal:**_ Ragdoll any NPC hit by a bullet.\
 _**System:**_ I need to find out how Cyberpunk 2077 handles bullets and damage → a look through the decompiled game scripts shows there is a class called „DamageSystem“. This class looked up on Cyberdoc shows there is a function wihtin that class called „ProcessLocalizedDamage“. Back in the decompiled game scripts the code of this function seems to handle a „hit event“ and checking if the bullet hit the head or any weak spots. That is very close to my goal, so I will use this function for the hook.\

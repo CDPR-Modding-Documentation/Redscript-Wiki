@@ -54,9 +54,13 @@ You can now put your redscript mods into `Cyberpunk 2077\r6\scripts` and they wi
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-12-31 165919.png" alt=""><figcaption></figcaption></figure>
 
-9. Save the settings and close VSCode
+9. Save the settings
 
 ## 3. Testing the tools
+
+{% hint style="warning" %}
+You need to restart VSCode before the redscript language server will start working
+{% endhint %}
 
 1. Create a mod development folder somewhere (example: `D:\Cyberpunk\redscript_modding`)
 2. Inside the folder, create a plain text file with a `.reds` extension (e.g. `MyMod.reds`)

@@ -1,6 +1,44 @@
-# String operations
+---
+description: How to get shit done with strings
+---
 
-### Conversions
+# Strings
+
+###
+
+***
+
+* For how to enable logging, please see [logging](../built-in-functions/logging/ "mention")
+* If you want to use strings for localization, check [utilities.md](../built-in-functions/utilities.md "mention") -> [#localization](../built-in-functions/utilities.md#localization "mention")
+
+## String interpolation
+
+REDscript lets you insert any expression into a string using the `s` prefix. This is a convenient way to create formatted strings without using concatenation or conversions.
+
+```swift
+Log(s"My name is \(name) and I am \(year - birthYear) years old");
+```
+
+This is equivalent to:
+
+```swift
+Log("My name is " + name + " and I am " + ToString(year - birthYear) + " years old");
+```
+
+The compiler automatically converts expressions of any type other than `String` using `ToString`.
+
+## String concatenation
+
+Via string addition overloads, you can simply use the `+` operator  to join strings with values of different types (such as `Int32` or `Float`) without using  [#string-conversions](strings.md#string-conversions "mention").
+
+```swift
+// You can use addition to combine strings with integers, floats and several other types 
+Log("My name is " + name + " and I am " + (year - birthYear) + " years old");
+```
+
+## String conversions
+
+Make sure to check [intrinsics.md](intrinsics.md "mention") for further conversions
 
 ```swift
 native func NameToString(n: CName) -> String
@@ -14,7 +52,7 @@ native func StringToUint64(const value: script_ref<String>, opt defValue: Uint64
 native func StringToHex(const str: script_ref<String>, lineLength: Uint32) -> String
 ```
 
-### String operations
+## String operations
 
 ```swift
 native func StrCmp(const str: script_ref<String>, const with: script_ref<String>, opt length: Int32, opt noCase: Bool) -> Int32
@@ -51,3 +89,4 @@ native func UnicodeStringCompare(const str: script_ref<String>, const str2: scri
 native func UnicodeStringLessThan(const str: script_ref<String>, const str2: script_ref<String>) -> Bool
 native func UnicodeStringLessThanEqual(const str: script_ref<String>, const str2: script_ref<String>) -> Bool
 ```
+
