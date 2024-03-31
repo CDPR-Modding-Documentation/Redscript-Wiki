@@ -89,6 +89,6 @@ let testField: Bool;
 
 9. Save again — everything should work now.
 
-If you want to make a redscript mod, you can check out [how-to-create-a-hook.md](../language/intro/how-to-create-a-hook.md "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
+If you want to make a redscript mod, you can check out [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
 
 [^1]: The place where you installed the game. You can get there by selecting "Browse Local Files" (or the equivalent option) in Steam/Epic/GOG.

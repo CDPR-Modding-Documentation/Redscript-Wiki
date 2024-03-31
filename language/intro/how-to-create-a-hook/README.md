@@ -6,8 +6,40 @@ description: Creating a hook (with code snippets)
 
 Created by [HJHughJanus](https://github.com/HJHughJanus) on github, copied here for easier maintainability
 
-Injecting your code without altering anything existing works via wrapping.\
-Once you‘re sure what you want to do, you need to find out which system and which function within that system handles something close to your goal and then use this function as a wrapper function for your code.
+## What is a hook?
+
+### wrapMethod
+
+Also called wrapper function, this piece of code **hooks** into existing game functions.&#x20;
+
+{% hint style="info" %}
+The only exception from that rule are functions and classes marked with the **`native`** keyword.
+{% endhint %}
+
+You define those wrappers outside of your own class at the root level.
+
+To trigger the original callback, you need to call  `wrappedMethod(evt)` either before or after you did your own thing:
+
+```swift
+@wrapMethod(YourWrappingTarget)
+protected cb func OnSomethingHappens(originalEventParam: ref<SomeRef>) -> Bool {
+  wrappedMethod(originalEventParam);
+  // do stuff here
+}
+```
+
+### replaceMethod
+
+Opposed to a wrapped method, a replaced method will stop the original game function from doing anything.
+
+```swift
+@replaceMethod(YourWrappingTarget)
+protected cb func OnSomethingHappens(originalEventParam: ref<SomeRef>) -> Bool {
+  return false;
+}
+```
+
+## Things to hook
 
 ## **Example**
 
@@ -117,7 +149,7 @@ Now my actual code can take effect. Since I found the „ApplyRagdollImpulseEven
 
 The whole file now looks like this:
 
-<figure><img src="../../.gitbook/assets/create_a_hook_final_file" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/create_a_hook_final_file" alt=""><figcaption></figcaption></figure>
 
 This file I save and then put into `D:\PATH\TO\CYBERPUNK2077\r6\scripts` so the game will load it.&#x20;
 

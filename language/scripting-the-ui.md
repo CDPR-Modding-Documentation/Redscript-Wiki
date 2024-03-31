@@ -85,7 +85,7 @@ let hudMiddle2 = window.GetWidgetByPathName(n"Root/HUDMiddleWidget");
 ## Example
 
 {% hint style="info" %}
-This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook.md](intro/how-to-create-a-hook.md "mention") or [callbacks-binding-to-events.md](intro/callbacks-binding-to-events.md "mention").
+This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](intro/how-to-create-a-hook/ "mention") or [binding-to-events.md](intro/binding-to-events.md "mention").
 {% endhint %}
 
 ```swift

@@ -1,10 +1,14 @@
 ---
-description: RegisterCallback, and how we can use it for control flow
+description: How we can use events for control flow
 ---
 
-# Callbacks: Binding to events
+# Binding to events
 
-Unlike [how-to-create-a-hook.md](how-to-create-a-hook.md "mention"), a callback will be registered via the game's **callback system**.&#x20;
+Unlike [how-to-create-a-hook](how-to-create-a-hook/ "mention"), a callback will be registered **through Codeware** via the game's **callback system**.&#x20;
+
+{% hint style="info" %}
+This method depends on Codeware. You can't use it alone.
+{% endhint %}
 
 ## Example
 
