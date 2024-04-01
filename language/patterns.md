@@ -103,3 +103,87 @@ public class MySystem extends ScriptableSystem {
 }
 ```
 
+### **Constructing Class Object**
+
+Redscript does not have Class constructors and to set the data of class fields you would have to either do that manually
+
+```swift
+public class CustomClass{
+    //all the variables 
+    public let myInt: Int32;
+    public let myString: String;
+}
+```
+
+```swift
+let myCustomClass = new CustomClass();
+myCustomClass.myInt = 1;
+myCustomClass.myString = "Hello";
+```
+
+&#x20;or if you want to do it with a single clean line
+
+```swift
+public class CustomClass{
+    //all the variables 
+    public let myInt: Int32;
+    public let myString: String;
+    
+    public static func Create(inputInt: Int32, inputString: String) -> CustomClass{
+        //you create the new instance of your class here instead of in your code
+        //and set its variables
+        let self = new CustomClass();
+        self.myInt = inputInt;
+        self.myString = inputString;
+        return self;
+    }
+}
+```
+
+and how to use it
+
+```swift
+let myCustomClass = CustomClass.Create(1,"Hello");
+```
+
+### DelaySystem and DelayCallback
+
+DelaySystem is a class that allows async call of DelayCallback after the set amount of time has passed.
+
+this is how to create a DelayCallback
+
+```swift
+public class CustomCallback extends DelayCallback{
+    //all the data that your Call function needs
+    private let myInt: Int32;
+    
+    public func Call() {
+        //custom function that i want to be called when the specified time has passed
+        if myInt>1 
+        {
+            LogChannel(n"DEBUG", "Input is bigger than 1");
+        }
+        else
+        {
+            LogChannel(n"DEBUG", "Input is smaller than 1");
+        }
+    }
+    
+    public static func Create(inputInt: Int32) -> CustomCallback {
+        //use this way to create your Callback class in one line
+        let self = new CustomCallback ();
+        self.myInt = inputInt;
+        return self;
+    }
+}
+```
+
+and this is how you can use the DelaySystem to call the Callback function with a delay
+
+```swift
+let delaySystem = GameInstance.GetDelaySystem(this.m_player.GetGame());
+let inputInt: Int32 = 2;
+let delay: Float = 1.0;
+let isAffectedByTimeDilation: Bool = false;
+delaySystem.DelayCallback(CustomCallback.Create(inputInt), delay, isAffectedByTimeDilation);
+```
