@@ -129,7 +129,7 @@ public class CustomClass{
     public let myInt: Int32;
     public let myString: String;
     
-    public static func Create(inputInt: Int32, inputString: String) -> CustomClass{
+    public static func Create(inputInt: Int32, inputString: String) -> ref<CustomClass>{
         //you create the new instance of your class here instead of in your code
         //and set its variables
         let self = new CustomClass();
@@ -159,7 +159,7 @@ public class CustomCallback extends DelayCallback{
     
     public func Call() {
         //custom function that i want to be called when the specified time has passed
-        if myInt>1 
+        if this.myInt>1 
         {
             LogChannel(n"DEBUG", "Input is bigger than 1");
         }
@@ -169,9 +169,9 @@ public class CustomCallback extends DelayCallback{
         }
     }
     
-    public static func Create(inputInt: Int32) -> CustomCallback {
+    public static func Create(inputInt: Int32) -> ref<CustomCallback> {
         //use this way to create your Callback class in one line
-        let self = new CustomCallback ();
+        let self = new CustomCallback();
         self.myInt = inputInt;
         return self;
     }
