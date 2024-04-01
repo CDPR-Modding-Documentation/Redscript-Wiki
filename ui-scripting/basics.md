@@ -2,7 +2,7 @@
 description: Influencing Cyberpunk's UI with REDscript
 ---
 
-# Scripting the UI
+# Basics
 
 ## Summary
 
@@ -13,7 +13,7 @@ This page will tell you how to script the UI (turning widgets on and off).&#x20;
 
 ### Wait, this is not what I want!
 
-* For help on [logging-widget-trees.md](built-in-functions/logging/logging-widget-trees.md "mention"), check the corresponding wiki page!
+* For help on [logging-widget-trees.md](logging-widget-trees.md "mention"), check the corresponding wiki page!
 * You can find guides on how to add custom UI elements on [Codeware's github repo](https://github.com/psiberx/cp2077-codeware/wiki#layers-and-windows).
 
 ## General information
@@ -68,7 +68,7 @@ private static func DumpInkHudLayers() {
 To find functions for traversing widget trees, check the [nativeDB page for inkCompoundWidget](https://nativedb.red4ext.com/inkCompoundWidget).
 
 {% hint style="info" %}
-Naturally, CDPR did not give their view elements unique names. Check the [#example](scripting-the-ui.md#example "mention") at the end of the page for how to find and enable a certain widget.
+Naturally, CDPR did not give their view elements unique names. Check the [#example](basics.md#example "mention") at the end of the page for how to find and enable a certain widget.
 {% endhint %}
 
 If there are multiple widgets with the same name, the call below can return any of them.
@@ -85,7 +85,7 @@ let hudMiddle2 = window.GetWidgetByPathName(n"Root/HUDMiddleWidget");
 ## Example
 
 {% hint style="info" %}
-This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](intro/how-to-create-a-hook/ "mention") or [binding-to-events.md](intro/binding-to-events.md "mention").
+This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention") or [binding-to-events.md](../language/intro/binding-to-events.md "mention").
 {% endhint %}
 
 ```swift

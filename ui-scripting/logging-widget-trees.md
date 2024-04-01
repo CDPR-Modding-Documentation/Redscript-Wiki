@@ -7,7 +7,7 @@
 
 ## Logging layer trees
 
-You can find a list of existing UI layers on [scripting-the-ui.md](../../scripting-the-ui.md "mention") -> [#inksystemlayers](../../scripting-the-ui.md#inksystemlayers "mention").
+You can find a list of existing UI layers on [basics.md](basics.md "mention") -> [#inksystemlayers](basics.md#inksystemlayers "mention").
 
 To traverse a layer's children, you first need to get the corresponding layer's virtual window:
 
@@ -28,7 +28,7 @@ PrintLayerHierarchy(n"inkHUDLayer")
 Big thanks to **Rayshader** for walking me through this with the patience of a saint!
 {% endhint %}
 
-You can add this code to your [`logs.reds`](./) file:
+You can add this code to your [`logs.reds`](../language/built-in-functions/logging.md) file:
 
 <pre class="language-swift"><code class="lang-swift"><strong>public static func LogWidgetTree(channel: CName, widget: wref&#x3C;inkCompoundWidget>, opt props: Bool, opt indent: String) {
 </strong>    let i = 0;

@@ -8,7 +8,7 @@ description: How to get shit done with strings
 
 ***
 
-* For how to enable logging, please see [logging](../built-in-functions/logging/ "mention")
+* For how to enable logging, please see [logging.md](../built-in-functions/logging.md "mention")
 * If you want to use strings for localization, check [utilities.md](../built-in-functions/utilities.md "mention") -> [#localization](../built-in-functions/utilities.md#localization "mention")
 
 ## String interpolation

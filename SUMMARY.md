@@ -24,15 +24,18 @@
   * [Configurable user hints](language/language-features/configurable-user-hints.md)
 * [Built-in Types](language/native-types.md)
 * [Built-in Functions](language/built-in-functions/README.md)
-  * [Logging](language/built-in-functions/logging/README.md)
-    * [Logging Widget Trees](language/built-in-functions/logging/logging-widget-trees.md)
+  * [Logging](language/built-in-functions/logging.md)
   * [Math](language/built-in-functions/math.md)
   * [Random](language/built-in-functions/random.md)
   * [Utilities](language/built-in-functions/utilities.md)
 * [Patterns](language/patterns.md)
-* [Scripting the UI](language/scripting-the-ui.md)
 
 ## Help
 
 * [Community](help/community.md)
 * [Troubleshooting](help/troubleshooting.md)
+
+## UI Scripting
+
+* [Basics](ui-scripting/basics.md)
+* [Logging Widget Trees](ui-scripting/logging-widget-trees.md)
