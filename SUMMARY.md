@@ -13,7 +13,7 @@
   * [REDscript in 2 minutes](language/intro/redscript-in-2-minutes.md)
   * [How to create a hook](language/intro/how-to-create-a-hook/README.md)
     * [Things to hook](language/intro/how-to-create-a-hook/things-to-hook.md)
-  * [Binding to events](language/intro/binding-to-events.md)
+  * [How to use Codeware callbacks](language/intro/how-to-use-codeware-callbacks.md)
 * [Language Features](language/language-features/README.md)
   * [Strings](language/language-features/strings.md)
   * [Intrinsics](language/language-features/intrinsics.md)

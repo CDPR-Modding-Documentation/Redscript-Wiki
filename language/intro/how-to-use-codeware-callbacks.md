@@ -2,9 +2,9 @@
 description: How we can use events for control flow
 ---
 
-# Binding to events
+# How to use Codeware callbacks
 
-Unlike [how-to-create-a-hook](how-to-create-a-hook/ "mention"), a callback will be registered **through Codeware** via the game's **callback system**.&#x20;
+Unlike [how-to-create-a-hook](how-to-create-a-hook/ "mention"), a callback can be be registered **through Codeware** **callback system**.&#x20;
 
 {% hint style="info" %}
 This method depends on Codeware. You can't use it alone.
@@ -15,13 +15,13 @@ This method depends on Codeware. You can't use it alone.
 ```swift
 class ExampleEnv extends ScriptableEnv {
   // instance variables
-  private let m_callbackSystem: wref<CallbackSystem>;
+  private let callbackSystem: wref<CallbackSystem>;
   private let found: Bool = false;
   
   // This function is always executed
   private func OnLoad() {
-    this.m_callbackSystem = GameInstance.GetCallbackSystem();
-    this.m_callbackSystem.RegisterCallback(n"Input/Key", this, n"OnKeyInput", true);
+    this.callbackSystem = GameInstance.GetCallbackSystem();
+    this.callbackSystem.RegisterCallback(n"Input/Key", this, n"OnKeyInput", true);
     
     LogChannel(n"DEBUG", s"ExampleEnv loaded");
   } 
@@ -44,8 +44,8 @@ Let's go over it bit by bit:
 
 This function is always executed, because our `ExampleEnv` inherits from `ScriptableEnv`.
 
-* It sets the instance variable `m_callbackSystem`, making sure that we don't have to get it from the game each time we want to use it.
-* It **binds to the `Input/Key` callback**, telling the game to run the function `OnKeyInput` each time
+* It sets the instance variable `callbackSystem`, making sure that we don't have to get it each time we want to use it.
+* It **binds to the `Input/Key` callback**, telling Codeware to run the function `OnKeyInput` each time
 * It prints to log
 
 ### OnKeyInput
@@ -54,7 +54,7 @@ This function is always executed, because our `ExampleEnv` inherits from `Script
 You can see that this function is a callback from the `cb func` rather than just `func`&#x20;
 {% endhint %}
 
-This function will be executed by `m_callbackSystem` every time the registered event (`Input/Key`) is triggered.
+This function will be executed every time the registered event (`Input/Key`) is triggered.
 
 Since we are checking our internal variable `found` before running any logic, this will only become active once.
 
@@ -69,6 +69,6 @@ As of **v0.5.19** (Mar 31 2024), unregistering `Input/Key` will crash the game (
 ```swift
 private cb func OnKeyInput(event: ref<KeyInputEvent>) {
   LogChannel(n"DEBUG", s"Input: \(event.GetAction()) \(event.GetKey())");
-  this.m_callbackSystem.UnregisterCallback(n"Input/Key", this, n"OnKeyInput");
+  this.callbackSystem.UnregisterCallback(n"Input/Key", this, n"OnKeyInput");
 }
 ```
