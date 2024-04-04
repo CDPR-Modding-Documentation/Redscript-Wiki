@@ -6,6 +6,9 @@
 
 * [Downloads](getting-started/downloads.md)
 * [Setting up Redscript and VSCode](getting-started/setting-up-redscript-and-vscode.md)
+* [How to start REDscripting](getting-started/how-to-start-redscripting/README.md)
+  * [Step 1: Mod structure](getting-started/how-to-start-redscripting/step-1-mod-structure.md)
+  * [Step 2: Finding the right class](getting-started/how-to-start-redscripting/step-2-finding-the-right-class.md)
 
 ## Language
 
@@ -30,12 +33,12 @@
   * [Utilities](language/built-in-functions/utilities.md)
 * [Patterns](language/patterns.md)
 
-## Help
-
-* [Community](help/community.md)
-* [Troubleshooting](help/troubleshooting.md)
-
 ## UI Scripting
 
 * [Basics](ui-scripting/basics.md)
 * [Logging Widget Trees](ui-scripting/logging-widget-trees.md)
+
+## Help
+
+* [Community](help/community.md)
+* [Troubleshooting](help/troubleshooting.md)
