@@ -38,6 +38,10 @@
 * [Basics](ui-scripting/basics.md)
 * [Logging Widget Trees](ui-scripting/logging-widget-trees.md)
 
+## References and examples
+
+* [Vehicle system](references-and-examples/vehicle-system.md)
+
 ## Help
 
 * [Community](help/community.md)
