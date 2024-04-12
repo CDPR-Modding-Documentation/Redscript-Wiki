@@ -55,8 +55,11 @@ native func StringToHex(const str: script_ref<String>, lineLength: Uint32) -> St
 ## String operations
 
 ```swift
+// length: default is -1
+// noCase: default is false
 native func StrCmp(const str: script_ref<String>, const with: script_ref<String>, opt length: Int32, opt noCase: Bool) -> Int32
-func StrContains(const str: script_ref<String>, const subStr: script_ref<String>) -> Bool
+
+native func StrContains(const str: script_ref<String>, const subStr: script_ref<String>) -> Bool
 native func StrBeginsWith(const str: script_ref<String>, const match: script_ref<String>) -> Bool
 native func StrEndsWith(const str: script_ref<String>, const match: script_ref<String>) -> Bool
 
