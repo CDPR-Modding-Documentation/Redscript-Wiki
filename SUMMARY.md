@@ -33,6 +33,10 @@
   * [Utilities](language/built-in-functions/utilities.md)
 * [Patterns](language/patterns.md)
 
+***
+
+* [Libraries](libraries.md)
+
 ## UI Scripting
 
 * [Basics](ui-scripting/basics.md)
