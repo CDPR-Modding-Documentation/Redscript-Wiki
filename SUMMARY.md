@@ -27,11 +27,11 @@
   * [Configurable user hints](language/language-features/configurable-user-hints.md)
 * [Built-in Types](language/native-types.md)
 * [Built-in Functions](language/built-in-functions/README.md)
-  * [Logging](language/built-in-functions/logging.md)
   * [Math](language/built-in-functions/math.md)
   * [Random](language/built-in-functions/random.md)
   * [Utilities](language/built-in-functions/utilities.md)
 * [Patterns](language/patterns.md)
+* [Logging](language/logging.md)
 
 ***
 

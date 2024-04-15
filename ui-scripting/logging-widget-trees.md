@@ -3,7 +3,13 @@
 ## Summary
 
 **Published**: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
-**Last documented update**: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
+**Last documented update**: Apr 15 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
+
+This page will tell you how to log widget trees and layer trees.
+
+### Wait, that's not what I want!
+
+To learn more about logging, check [logging.md](../language/logging.md "mention")
 
 ## Logging layer trees
 
@@ -28,7 +34,7 @@ PrintLayerHierarchy(n"inkHUDLayer")
 Big thanks to **Rayshader** for walking me through this with the patience of a saint!
 {% endhint %}
 
-You can add this code to your [`logs.reds`](../language/built-in-functions/logging.md) file:
+You can add this code to your [`logs.reds`](../language/logging.md) file:
 
 <pre class="language-swift"><code class="lang-swift"><strong>public static func LogWidgetTree(channel: CName, widget: wref&#x3C;inkCompoundWidget>, opt props: Bool, opt indent: String) {
 </strong>    let i = 0;

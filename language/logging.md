@@ -2,7 +2,7 @@
 
 ### Logging and tracing functions
 
-{% hint style="info" %}
+{% hint style="danger" %}
 With Cyberpunk >= 2.01, you need to paste the snippet below into e.g. \
 `r6\scripts\Logs.reds`\
 if you want to avoid `UNRESOLVED_FN` errors at compile time.
@@ -43,3 +43,7 @@ func OnRestored() -> Void {
     LogChannel(n"DEBUG", "Player Initialized"); // create a log output
 }
 ```
+
+## Where does it go?
+
+You can see the output on your [CET console](https://app.gitbook.com/s/-MP5jWcLZLbbbzO-\_ua1-887967055/console/console), or in the `scripting.log` inside the CET folder.

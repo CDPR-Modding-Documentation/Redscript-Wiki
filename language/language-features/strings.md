@@ -4,7 +4,7 @@ description: How to get shit done with strings
 
 # Strings
 
-* For how to enable logging, please see [logging.md](../built-in-functions/logging.md "mention")
+* For how to enable logging, please see [logging.md](../logging.md "mention")
 * If you want to use strings for localization, check [utilities.md](../built-in-functions/utilities.md "mention") -> [#localization](../built-in-functions/utilities.md#localization "mention")
 
 ## String interpolation
