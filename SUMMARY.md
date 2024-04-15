@@ -45,6 +45,7 @@
 ## References and examples
 
 * [Vehicle system](references-and-examples/vehicle-system.md)
+* [Weapons](references-and-examples/weapons.md)
 
 ## Help
 
