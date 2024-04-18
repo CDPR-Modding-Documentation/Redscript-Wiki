@@ -7,6 +7,10 @@ description: >-
 
 # Annotations
 
+{% hint style="warning" %}
+You cannot use the following annotations on native functions.
+{% endhint %}
+
 ### @wrapMethod(class)
 
 You can use this annotation to write a new function that supersedes an existing method with the same name and parameters on a specified class. Your function will execute instead of the original method whenever it is invoked, but you can still access the underlying method by using the `wrappedMethod(…)` identifier. You would typically invoke the wrapped method in your newly defined function and forward all the arguments unchanged to preserve it's original behavior, but you can also modify the arguments or the final return value if you wish. Furthermore, this annotation can be applied multiple times to chain multiple functions that modify the same method. Each function in the chain wraps around the previous one. This helps to keep mods compatible even if they alter the same methods. For example, multiple mods can use this annotation to append new buttons to the main menu:
@@ -101,10 +105,6 @@ public static func CreateExpEvent(amount: Int32, type: gamedataProficiencyType) 
 <strong>    ...
 </strong>}
 </code></pre>
-
-{% hint style="info" %}
-This is known not to work for some native functions.
-{% endhint %}
 
 ### @addField(class)
 
