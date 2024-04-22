@@ -6,19 +6,32 @@ description: Built-in types available in the game runtime.
 
 ## Logical Types
 
-<table data-header-hidden><thead><tr><th width="155.33333333333331" align="center">Keyword</th><th width="206">Type</th><th>Values</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td><td>Values</td></tr><tr><td align="center"><code>Bool</code></td><td>Boolean logic type</td><td><code>true</code>  <code>false</code></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="116.33333333333331">Keyword</th><th width="206">Type</th><th>Values</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Values</td></tr><tr><td><code>Bool</code></td><td>Boolean logic type</td><td><code>true</code>  <code>false</code></td></tr></tbody></table>
 
 ## Integer Types
 
-<table data-header-hidden><thead><tr><th width="155" align="center">Keyword</th><th width="207">Type</th><th width="195">Range</th><th>Example</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td><td>Range</td><td>Example</td></tr><tr><td align="center"><code>Int8</code></td><td>8-bit Signed Integer</td><td><code>-128</code> to <code>127</code></td><td><code>let a: Int8 = 161</code></td></tr><tr><td align="center"><code>Uint8</code></td><td>8-bit Unsigned Integer</td><td><code>0</code> to <code>255</code></td><td><code>let a: Uint8 = 161u</code></td></tr><tr><td align="center"><code>Int16</code></td><td>16-bit Signed Integer</td><td><code>-32,768</code> to <code>32,767</code></td><td><code>let a: Int16 = 161</code></td></tr><tr><td align="center"><code>Uint16</code></td><td>16-bit Unsigned Integer</td><td><code>0</code> to <code>65,535</code></td><td><code>let a: Uint16 = 161u</code></td></tr><tr><td align="center"><code>Int32</code></td><td>32-bit Signed Integer</td><td><code>−2,147,483,648</code> to <code>2,147,483,647</code></td><td><code>let a: Int32 = 161</code></td></tr><tr><td align="center"><code>Uint32</code></td><td>32-bit Unsigned Integer</td><td><code>0</code> to <code>4,294,967,295</code></td><td><code>let a: Uint32 = 161u</code></td></tr><tr><td align="center"><code>Int64</code></td><td>64-bit Signed Integer</td><td><code>−9,223,372,036,854,775,808</code> to <code>9,223,372,036,854,775,807</code></td><td><code>let a: Int64 = 161l</code></td></tr><tr><td align="center"><code>Uint64</code></td><td>64-bit Unsigned Integer</td><td><code>0</code> to <code>18,446,744,073,709,551,615</code></td><td><code>let a: Uint64 = 161ul</code></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="116">Keyword</th><th width="207">Type</th><th width="198">Range</th><th>Example</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Range</td><td>Example</td></tr><tr><td><code>Int8</code></td><td>8-bit Signed Integer</td><td><code>-128</code> to <code>127</code></td><td><code>let a: Int8 = 161;</code></td></tr><tr><td><code>Uint8</code></td><td>8-bit Unsigned Integer</td><td><code>0</code> to <code>255</code></td><td><code>let a: Uint8 = 161u;</code></td></tr><tr><td><code>Int16</code></td><td>16-bit Signed Integer</td><td><code>-32,768</code> to <code>32,767</code></td><td><code>let a: Int16 = 161;</code></td></tr><tr><td><code>Uint16</code></td><td>16-bit Unsigned Integer</td><td><code>0</code> to <code>65,535</code></td><td><code>let a: Uint16 = 161u;</code></td></tr><tr><td><code>Int32</code></td><td>32-bit Signed Integer</td><td><code>−2,147,483,648</code> to <code>2,147,483,647</code></td><td><code>let a: Int32 = 161;</code></td></tr><tr><td><code>Uint32</code></td><td>32-bit Unsigned Integer</td><td><code>0</code> to <code>4,294,967,295</code></td><td><code>let a: Uint32 = 161u;</code></td></tr><tr><td><code>Int64</code></td><td>64-bit Signed Integer</td><td><code>−9,223,372,036,854,775,808</code> to <code>9,223,372,036,854,775,807</code></td><td><code>let a: Int64 = 161l;</code></td></tr><tr><td><code>Uint64</code></td><td>64-bit Unsigned Integer</td><td><code>0</code> to <code>18,446,744,073,709,551,615</code></td><td><code>let a: Uint64 = 161ul;</code></td></tr></tbody></table>
+
+You can declare inline numbers using `Cast<T>(value)`. It is useful for `Int8`/`Uint8` and `Int16`/`Uint16` for example:
+
+```swift
+// Fake function to use:
+public static func UseNumber(a: Int8, ua: Uint8, b: Int16, ub: Uint16) -> Void;
+
+// Use explicit cast
+UseNumber(Cast<Int8>(127),
+          Cast<Uint8>(255u),
+          Cast<Int16>(32767),
+          Cast<Uint16>(65535u));
+```
 
 ## Floating-Point Types
 
-<table data-header-hidden><thead><tr><th width="155.33333333333331">Keyword</th><th width="207">Type</th><th>Range</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Range</td></tr><tr><td><code>Float</code></td><td>32-bit Single-Precision</td><td>6-9 significant decimal digits (<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">more info</a>)</td></tr><tr><td><code>Double</code></td><td>64-bit Double-Precision</td><td>15-17 significant decimal digits (<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">more info</a>)</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="116.33333333333331">Keyword</th><th width="207">Type</th><th width="219">Range</th><th></th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Range</td><td>Example</td></tr><tr><td><code>Float</code></td><td>32-bit Single-Precision</td><td>6-9 significant decimal digits (<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">more info</a>)</td><td><code>let a: Float = 3.141592;</code></td></tr><tr><td><code>Double</code></td><td>64-bit Double-Precision</td><td>15-17 significant decimal digits (<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">more info</a>)</td><td><code>let a: Double = 3.141592653589793d;</code></td></tr></tbody></table>
 
 ## Literal Types
 
-<table data-header-hidden><thead><tr><th width="155">Keyword</th><th width="207">Type</th><th width="81">Prefix</th><th>Example</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Prefix</td><td>Example</td></tr><tr><td><code>String</code></td><td>Mutable character string</td><td></td><td><code>"Hello world"</code></td></tr><tr><td><code>CName</code></td><td>Non-mutable string constant</td><td><code>n</code></td><td><code>n"VehicleComponent"</code></td></tr><tr><td><code>ResRef</code></td><td>Resource reference path</td><td><code>r</code></td><td><code>r"base\\anim_cooked.cookedanims"</code></td></tr><tr><td><code>TweakDBID</code></td><td>TweakDB Record ID</td><td><code>t</code></td><td><code>t"Items.RequiredItemStats"</code></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="145">Keyword</th><th width="190">Type</th><th width="82">Prefix</th><th>Example</th></tr></thead><tbody><tr><td>Keyword</td><td>Type</td><td>Prefix</td><td>Example</td></tr><tr><td><code>String</code></td><td>Mutable character string</td><td></td><td><code>"Hello world"</code></td></tr><tr><td><code>CName</code></td><td>Non-mutable string constant</td><td><code>n</code></td><td><code>n"VehicleComponent"</code></td></tr><tr><td><code>ResRef</code></td><td>Resource reference path</td><td><code>r</code></td><td><code>r"base\\anim_cooked.cookedanims"</code></td></tr><tr><td><code>TweakDBID</code></td><td>TweakDB Record ID</td><td><code>t</code></td><td><code>t"Items.RequiredItemStats"</code></td></tr></tbody></table>
 
 `String` values are stored internally as a null-terminated character array, unfortunately the bytecode doesn't support accessing the individual characters as an array.
 
@@ -30,7 +43,7 @@ description: Built-in types available in the game runtime.
 
 ## Other Types
 
-<table data-header-hidden><thead><tr><th width="155" align="center">Keyword</th><th>Type</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td></tr><tr><td align="center"><code>Variant</code></td><td>A dynamic type that can store any other type</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="139" align="center">Keyword</th><th>Type</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td></tr><tr><td align="center"><code>Variant</code></td><td>A dynamic type that can store any other type</td></tr></tbody></table>
 
 ## Operators
 
