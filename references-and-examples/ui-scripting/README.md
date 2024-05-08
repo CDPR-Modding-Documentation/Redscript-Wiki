@@ -2,7 +2,7 @@
 description: Influencing Cyberpunk's UI with REDscript
 ---
 
-# Basics
+# UI Scripting
 
 ## Summary
 
@@ -68,7 +68,7 @@ private static func DumpInkHudLayers() {
 To find functions for traversing widget trees, check the [nativeDB page for inkCompoundWidget](https://nativedb.red4ext.com/inkCompoundWidget).
 
 {% hint style="info" %}
-Naturally, CDPR did not give their view elements unique names. Check the [#example](basics.md#example "mention") at the end of the page for how to find and enable a certain widget.
+Naturally, CDPR did not give their view elements unique names. Check the [#example](./#example "mention") at the end of the page for how to find and enable a certain widget.
 {% endhint %}
 
 If there are multiple widgets with the same name, the call below can return any of them.
@@ -85,7 +85,7 @@ let hudMiddle2 = window.GetWidgetByPathName(n"Root/HUDMiddleWidget");
 ## Example
 
 {% hint style="info" %}
-This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention") or [how-to-use-codeware-callbacks.md](../language/intro/how-to-use-codeware-callbacks.md "mention").
+This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](../../language/intro/how-to-create-a-hook/ "mention") or [codeware-callbacks.md](../codeware-callbacks.md "mention").
 {% endhint %}
 
 ```swift

@@ -22,8 +22,8 @@ Redscript is an open-source programming language and toolset designed to work na
 [built-in-functions](language/built-in-functions/)
 {% endcontent-ref %}
 
-{% content-ref url="language/patterns.md" %}
-[patterns.md](language/patterns.md)
+{% content-ref url="references-and-examples/common-patterns/" %}
+[common-patterns](references-and-examples/common-patterns/)
 {% endcontent-ref %}
 
 ## Websites & Community

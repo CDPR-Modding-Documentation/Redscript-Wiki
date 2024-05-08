@@ -9,11 +9,11 @@ This page will tell you how to log widget trees and layer trees.
 
 ### Wait, that's not what I want!
 
-To learn more about logging, check [logging.md](../language/logging.md "mention")
+To learn more about logging, check [logging.md](../logging.md "mention")
 
 ## Logging layer trees
 
-You can find a list of existing UI layers on [basics.md](basics.md "mention") -> [#inksystemlayers](basics.md#inksystemlayers "mention").
+You can find a list of existing UI layers on [.](./ "mention") -> [#inksystemlayers](./#inksystemlayers "mention").
 
 To traverse a layer's children, you first need to get the corresponding layer's virtual window:
 
@@ -34,7 +34,7 @@ PrintLayerHierarchy(n"inkHUDLayer")
 Big thanks to **Rayshader** for walking me through this with the patience of a saint!
 {% endhint %}
 
-You can add this code to your [`logs.reds`](../language/logging.md) file:
+You can add this code to your [`logs.reds`](../logging.md) file:
 
 <pre class="language-swift"><code class="lang-swift"><strong>public static func LogWidgetTree(channel: CName, widget: wref&#x3C;inkCompoundWidget>, opt props: Bool, opt indent: String) {
 </strong>    let i = 0;

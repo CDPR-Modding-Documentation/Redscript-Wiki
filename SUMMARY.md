@@ -16,7 +16,6 @@
   * [REDscript in 2 minutes](language/intro/redscript-in-2-minutes.md)
   * [How to create a hook](language/intro/how-to-create-a-hook/README.md)
     * [Things to hook](language/intro/how-to-create-a-hook/things-to-hook.md)
-  * [How to use Codeware callbacks](language/intro/how-to-use-codeware-callbacks.md)
 * [Language Features](language/language-features/README.md)
   * [Intrinsics](language/language-features/intrinsics.md)
   * [Loops](language/language-features/loops.md)
@@ -30,22 +29,24 @@
   * [Math](language/built-in-functions/math.md)
   * [Random](language/built-in-functions/random.md)
   * [Utilities](language/built-in-functions/utilities.md)
-* [Patterns](language/patterns.md)
-* [Logging](language/logging.md)
-
-***
-
-* [Libraries](libraries.md)
-
-## UI Scripting
-
-* [Basics](ui-scripting/basics.md)
-* [Logging Widget Trees](ui-scripting/logging-widget-trees.md)
 
 ## References and examples
 
+* [Common Patterns](references-and-examples/common-patterns/README.md)
+  * [Safe downcasting](references-and-examples/common-patterns/safe-downcasting.md)
+  * [Class constructors](references-and-examples/common-patterns/class-constructors.md)
+  * [Hash maps](references-and-examples/common-patterns/hash-maps.md)
+  * [Heterogeneous array literals](references-and-examples/common-patterns/heterogeneous-array-literals.md)
+  * [Scriptable systems (singletons)](references-and-examples/common-patterns/scriptable-systems-singletons.md)
+  * [DelaySystem and DelayCallback](references-and-examples/common-patterns/delaysystem-and-delaycallback.md)
+  * [Persistence](references-and-examples/common-patterns/persistence.md)
+* [Logging](references-and-examples/logging.md)
+* [UI Scripting](references-and-examples/ui-scripting/README.md)
+  * [Logging Widget Trees](references-and-examples/ui-scripting/logging-widget-trees.md)
 * [Vehicle system](references-and-examples/vehicle-system.md)
 * [Weapons](references-and-examples/weapons.md)
+* [Codeware callbacks](references-and-examples/codeware-callbacks.md)
+* [Libraries](references-and-examples/libraries.md)
 
 ## Help
 

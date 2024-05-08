@@ -23,6 +23,17 @@ public func Pi() -> Float = 3.14159
 public func E() -> Float = 2.71828
 ```
 
+{% hint style="info" %}
+Types and functions placed in modules are only accessible by fully qualified names at runtime. This matters when you try to
+
+* interact with them from CET or red4ext
+* refer to them with a CName, which is accepted by some methods like `ScriptableSystemsContainer.Get`
+
+The fully qualified name consists of the full module path followed by the name of the type/function. In this case these two functions become `Math.Constants.Pi` and `Math.Constants.E`.&#x20;
+
+One should also be careful not to define existing in-game natives like `LogChannel` inside a module because that will always lead to a name mismatch.
+{% endhint %}
+
 This module has two public functions that return math constants. You can use them in another file by importing them and calling them by name like this:
 
 ```swift

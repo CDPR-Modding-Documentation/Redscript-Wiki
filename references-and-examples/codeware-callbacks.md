@@ -2,9 +2,9 @@
 description: How we can use events for control flow
 ---
 
-# How to use Codeware callbacks
+# Codeware callbacks
 
-Unlike [how-to-create-a-hook](how-to-create-a-hook/ "mention"), a callback can be be registered **through Codeware** **callback system**.&#x20;
+Unlike [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention"), a callback can be be registered **through Codeware** **callback system**.&#x20;
 
 {% hint style="info" %}
 This method depends on Codeware. You can't use it alone.

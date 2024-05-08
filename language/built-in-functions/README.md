@@ -4,7 +4,7 @@ description: Built-in functions available in the game runtime.
 
 # Built-in Functions
 
-* [logging.md](../logging.md "mention")
+* [logging.md](../../references-and-examples/logging.md "mention")
 * [math.md](math.md "mention")
 * [Broken link](broken-reference "mention")
 * [random.md](random.md "mention")
