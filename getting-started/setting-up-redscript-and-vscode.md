@@ -32,29 +32,22 @@ You can now put your redscript mods into `Cyberpunk 2077\r6\scripts` and they wi
 
 <figure><img src="../.gitbook/assets/setup_redscript_vscode_extensions.png" alt=""><figcaption></figcaption></figure>
 
-3. Search for `redscript` and install the `Redscript Syntax Highlighting` extension. Do not close the tab yet.
+3. Search for `redscript ide` and install the `Redscript IDE` extension.
 
-<figure><img src="../.gitbook/assets/setup_redscript_syntax_highlighting" alt=""><figcaption></figcaption></figure>
 
-4. Download the redscript extension from [github](https://github.com/jac3km4/redscript-ide-vscode/releases):
 
-<figure><img src="../.gitbook/assets/setup_redscript_download_ide" alt=""><figcaption></figcaption></figure>
+<div align="center">
 
-5. In VSCode, click the … symbol in the topright of the extension manager and select `Install from VSIX…:`
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/setup_redscript_install_vsix" alt=""><figcaption></figcaption></figure>
+</div>
 
-6. Navigate the file picker to your downloads folder and install the file from step 4.
-7. Your extension manager will now show both addons as installed. **If it does not,** restart VSCode.
-8. Click on the cog menu next to redscript-ide-vscode:
-
-<figure><img src="../.gitbook/assets/setup_redscript_configure" alt=""><figcaption></figcaption></figure>
-
-8. Set up the path to your cyberpunk install in VS Code preferences.
+4. Click on the cog menu next to redscript-ide-vscode:
+5. Set up the path to your cyberpunk install in VS Code preferences.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-12-31 165919.png" alt=""><figcaption></figcaption></figure>
 
-9. Save the settings
+6. Save the settings
 
 ## 3. Testing the tools
 
