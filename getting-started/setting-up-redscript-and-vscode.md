@@ -84,4 +84,51 @@ let testField: Bool;
 
 If you want to make a redscript mod, you can check out [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
 
+## 4. Bundle with red-cli
+
+{% hint style="info" %}
+This step is optional. You might find this tool helpful to avoid repetitive tasks.
+{% endhint %}
+
+`red-cli` is command line interface tool to improve your experience as a scripting modder. It allows you to run commands from a terminal to quickly install your scripts in game folder. It is also convenient to make an archive with your scripts, ready to release to users on Nexus Mod.
+
+You can find [red-cli](https://github.com/rayshader/cp2077-red-cli) on GitHub to download and install it on your system. You can then follow its README, it should explain everything you need to know to use it.
+
+As an example, lets say your project (Cocktail · v0.1.0) contains the following scripts:
+
+```sh
+Cocktail/
+|-- red.config.json                // Project's configuration, see README.
+|-- scripts/
+    |-- FruitCocktail.reds
+    |-- Utils.reds
+    |-- Data/
+        |-- Fruit.reds
+        |-- Banana.reds
+    |-- Services/
+        |-- CocktailService.reds
+    |-- Extensions/
+        |-- PlayerPuppet.reds
+        |-- ItemObject.reds
+```
+
+If you run the command `red-cli pack` in a terminal, it will bundle scripts and output an archive like this:
+
+```sh
+Cocktail/
+|-- Cocktail-v0.1.0.zip
+    |-- r6/
+        |-- scripts/
+            |-- Cocktail/
+                |-- Cocktail.reds
+                |-- Cocktail.Global.reds
+                |-- Cocktail.Data.reds
+                |-- Cocktail.Services.reds
+                |-- Cocktail.Extensions.reds
+```
+
+It helps quickly prepare your mod to release it. It also reduce the amount of scripts by merging them per module (see [module feature](../language/language-features/modules.md)). When the code is in the global scope (no module statement), it will merge scripts in `<name>.Global.reds`, with this example, in `Cocktail.Global.reds`.
+
+If you have questions or feedback regarding this tool, please reach out in [red-cli](https://app.gitbook.com/s/BebXhPyeIAEOE4iqaLDr/) channel on Discord.
+
 [^1]: The place where you installed the game. You can get there by selecting "Browse Local Files" (or the equivalent option) in Steam/Epic/GOG.
