@@ -96,7 +96,7 @@ You can find [red-cli](https://github.com/rayshader/cp2077-red-cli) on GitHub to
 
 As an example, lets say your project (Cocktail · v0.1.0) contains the following scripts:
 
-```sh
+```
 Cocktail/
 |-- red.config.json                // Project's configuration, see README.
 |-- scripts/
@@ -114,7 +114,7 @@ Cocktail/
 
 If you run the command `red-cli pack` in a terminal, it will bundle scripts and output an archive like this:
 
-```sh
+```
 Cocktail/
 |-- Cocktail-v0.1.0.zip
     |-- r6/
