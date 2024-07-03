@@ -72,41 +72,40 @@ import MyMod.Logger.*
 
 class CrazyService extends ScriptableService {
   private cb func OnLoad() {
-    Log("[CrazyService] OnLoad");
+    Log("Psycho stuff!");
   }
 }
 
 // It will log something like:
-// ... [MyMod] [CrazyService] OnLoad
+// ... [MyMod] Psycho stuff!
 ```
 
-We can even improve on this. Add a parameter to directly prefix our logs with the current class we are logging from:
+We can even improve on this. Codeware provides the function [GetStackTrace](https://github.com/psiberx/cp2077-codeware/blob/main/scripts/Scripting/StackTrace.reds#L7) so we can deduce the class and function where our logging function is executed:
 
 ```swift
 module MyMod.Logger
 
-public static func Log(object: wref<IScriptable>,
-                       value: script_ref<String>) -> Void {
-  ModLog(n"MyMod", s"[\(object.GetClassName())] \(value)");
+public static func Log(value: script_ref<String>) -> Void {
+  let entries = GetStackTrace(0, true);
+  let trace = "";
+
+  if ArraySize(entries) > 0 {
+    let entry = entries[0];
+
+    trace = s"[\(entry.class)][\(entry.function)]";
+  }
+  ModLog(n"MyMod", s"\(trace) \(value)");
 }
 ```
 
-Usage will be:
+You can use it the same way, this time it will log something like:
 
 ```swift
-import Codeware.*
-import MyMod.Logger.*
-
-class CrazyService extends ScriptableService {
-  private cb func OnLoad() {
-    Log(this, "OnLoad");
-  }
-}
-
-// It will log something like:
-// ... [MyMod] [CrazyService] OnLoad
+// ... [MyMod] [CrazyService][OnLoad] Psycho stuff!
 ```
 
-This output is the same except you don't need to write the class name yourself when calling function `Log`. This is convenient as you don't have to worry when you copy/paste this line in another function. The class name will be deduced for you using `this` parameter.
+This is convenient as you don't have to worry when you copy/paste this line in another function. The class and function name will be deduced for you.
 
-You could also add another parameter to add the function name as a prefix too. However you'll have to manually write it. It cannot be deduced automatically.
+{% hint style="info" %}
+You can improve this function to list more entries of the stack trace. This is up to you to implement it if you want it. A better alternative worth checking is to use [redscript-dap](https://github.com/jac3km4/redscript-dap), a debugger which integrates with VS Code.
+{% endhint %}
