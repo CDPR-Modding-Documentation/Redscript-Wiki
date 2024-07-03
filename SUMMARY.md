@@ -47,6 +47,8 @@
 * [Weapons](references-and-examples/weapons.md)
 * [Codeware callbacks](references-and-examples/codeware-callbacks.md)
 * [Libraries](references-and-examples/libraries.md)
+* [Gameplay](references-and-examples/gameplay/README.md)
+  * [Sleeping and Skipping Time](references-and-examples/gameplay/sleeping-and-skipping-time.md)
 
 ## Help
 
