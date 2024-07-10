@@ -59,15 +59,15 @@ You can use the function `FTLog` to create logs with your mod's name as a prefix
 ```swift
 module MyMod.Logger
 
-public static func Log(value: script_ref<String>) -> Void {
+public static func MyLog(value: script_ref<String>) -> Void {
   FTLog(s"[MyMod] \(value)");
 }
 
-public static func LogWarn(value: script_ref<String>) -> Void {
+public static func MyLogWarn(value: script_ref<String>) -> Void {
   FTLogWarning(s"[MyMod] \(value)");
 }
 
-public static func LogError(value: script_ref<String>) -> Void {
+public static func MyLogError(value: script_ref<String>) -> Void {
   FTLogError(s"[MyMod] \(value)");
 }
 ```
@@ -80,9 +80,9 @@ import MyMod.Logger.*
 
 class CrazyService extends ScriptableService {
   private cb func OnLoad() {
-    Log("Psycho stuff!");
-    LogWarn("Psycho stuff!");
-    LogError("Psycho stuff!");
+    MyLog("Psycho stuff!");
+    MyLogWarn("Psycho stuff!");
+    MyLogError("Psycho stuff!");
   }
 }
 
@@ -97,7 +97,7 @@ We can even improve on this with [Codeware](https://github.com/psiberx/cp2077-co
 ```swift
 module MyMod.Logger
 
-public static func Log(value: script_ref<String>) -> Void {
+public static func MyLog(value: script_ref<String>) -> Void {
   let entries = GetStackTrace(1, true);
   let entry = entries[0];
   let trace = "";
@@ -110,7 +110,7 @@ public static func Log(value: script_ref<String>) -> Void {
   FTLog(s"[MyMod] \(trace) \(value)");
 }
 
-// Same with LogWarn / LogError and FTLogWarning / FTLogError.
+// Same with MyLogWarn / MyLogError and FTLogWarning / FTLogError.
 ```
 
 You can use it the same way, this time it will log something like:
