@@ -4,7 +4,7 @@ description: How we can use events for control flow
 
 # Codeware callbacks
 
-Unlike [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention"), a callback can be be registered **through Codeware** **callback system**.&#x20;
+Unlike [how-to-create-a-hook](../../language/intro/how-to-create-a-hook/ "mention"), a callback can be be registered **through Codeware** **callback system**.&#x20;
 
 {% hint style="info" %}
 This method depends on Codeware. You can't use it alone.
@@ -13,7 +13,7 @@ This method depends on Codeware. You can't use it alone.
 ## Example
 
 ```swift
-class ExampleEnv extends ScriptableEnv {
+class ExampleService extends ScriptableService {
   // instance variables
   private let callbackSystem: wref<CallbackSystem>;
   private let found: Bool = false;
@@ -23,7 +23,7 @@ class ExampleEnv extends ScriptableEnv {
     this.callbackSystem = GameInstance.GetCallbackSystem();
     this.callbackSystem.RegisterCallback(n"Input/Key", this, n"OnKeyInput", true);
     
-    LogChannel(n"DEBUG", s"ExampleEnv loaded");
+    LogChannel(n"DEBUG", s"ExampleService loaded");
   } 
   
   // Will always listen, but only react once
@@ -42,7 +42,7 @@ Let's go over it bit by bit:
 
 ### OnLoad
 
-This function is always executed, because our `ExampleEnv` inherits from `ScriptableEnv`.
+This function is always executed, because our `ExampleService` inherits from `ScriptableService`.
 
 * It sets the instance variable `callbackSystem`, making sure that we don't have to get it each time we want to use it.
 * It **binds to the `Input/Key` callback**, telling Codeware to run the function `OnKeyInput` each time
