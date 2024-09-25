@@ -39,6 +39,7 @@
   * [Heterogeneous array literals](references-and-examples/common-patterns/heterogeneous-array-literals.md)
   * [Scriptable systems (singletons)](references-and-examples/common-patterns/scriptable-systems-singletons.md)
   * [DelaySystem and DelayCallback](references-and-examples/common-patterns/delaysystem-and-delaycallback.md)
+  * [Generic callbacks](references-and-examples/common-patterns/generic-callbacks.md)
   * [Persistence](references-and-examples/common-patterns/persistence.md)
 * [Logging](references-and-examples/logging.md)
 * [UI Scripting](references-and-examples/ui-scripting/README.md)
