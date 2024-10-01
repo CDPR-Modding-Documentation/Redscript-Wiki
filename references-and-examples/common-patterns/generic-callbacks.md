@@ -63,7 +63,7 @@ public class MyService extends ScriptableService {
     }
     let delaySystem = GameInstance.GetDelaySystem(GetGameInstance());
     let callback = Callback.Create(this, n"OnPlay", [42]);
-    let delay: Float = 1000; // ms
+    let delay: Float = 1.0; // seconds
 
     delaySystem.DelayCallback(callback, delay, false);
     // callback.Call();
@@ -73,7 +73,7 @@ public class MyService extends ScriptableService {
   // [arg] is an optional argument which can be passed when calling [Callback.Create].
   private cb func OnPlay(arg: Int32) {
     FTLog(s"arg: \(arg)");
-    // do stuff after [delay] ms.
+    // do stuff after [delay] s.
   }
 
 }
@@ -126,7 +126,7 @@ public class MyService extends ScriptableService {
     }
     let delaySystem = GameInstance.GetDelaySystem(GetGameInstance());
     let callback = StaticCallback.Create(n"MyModule.MyService::OnPlay", [n"Choom"]);
-    let delay: Float = 1000; // ms
+    let delay: Float = 1.0; // seconds
 
     delaySystem.DelayCallback(callback, delay, false);
     // callback.Call();
@@ -136,7 +136,7 @@ public class MyService extends ScriptableService {
   // [name] is an optional argument which can be passed when calling [StaticCallback.Create].
   private static cb func OnPlay(name: CName) {
     FTLog(s"name: \(name)");
-    // do stuff after [delay] ms.
+    // do stuff after [delay] s.
   }
 
 }
