@@ -5,7 +5,8 @@
 ## Getting Started
 
 * [Downloads](getting-started/downloads.md)
-* [Setting up Redscript and VSCode](getting-started/setting-up-redscript-and-vscode.md)
+* [Setup for VSCode](getting-started/setup-for-vscode.md)
+* [Setup for JetBrains IDEs](getting-started/setup-for-jetbrains-ides.md)
 * [How to start REDscripting](getting-started/how-to-start-redscripting/README.md)
   * [Step 1: Mod structure](getting-started/how-to-start-redscripting/step-1-mod-structure.md)
   * [Step 2: Finding the right class](getting-started/how-to-start-redscripting/step-2-finding-the-right-class.md)

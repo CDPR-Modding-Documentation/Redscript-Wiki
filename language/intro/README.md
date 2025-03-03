@@ -2,7 +2,7 @@
 
 ### Quick ways to get started with REDscript
 
-* Read on [setting-up-redscript-and-vscode.md](../../getting-started/setting-up-redscript-and-vscode.md "mention") ( [VSCode extension with IDE features](https://github.com/jac3km4/redscript-ide-vscode))
+* Read on [setup-for-vscode.md](../../getting-started/setup-for-vscode.md "mention") ( [VSCode extension with IDE features](https://github.com/jac3km4/redscript-ide-vscode))
 * Check out [redscript-in-2-minutes.md](redscript-in-2-minutes.md "mention")
 * Look up[ example game patches](https://github.com/jac3km4/redscript/blob/master/resources/patches.reds)
 * Learn [how-to-create-a-hook](how-to-create-a-hook/ "mention") (copied from [GitHub's Discussion page](https://github.com/jac3km4/redscript/discussions/66))
