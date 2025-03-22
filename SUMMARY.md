@@ -45,6 +45,7 @@
 * [Logging](references-and-examples/logging.md)
 * [UI Scripting](references-and-examples/ui-scripting/README.md)
   * [Logging Widget Trees](references-and-examples/ui-scripting/logging-widget-trees.md)
+  * [Popups](references-and-examples/ui-scripting/popups.md)
 * [Vehicle system](references-and-examples/vehicle-system.md)
 * [Weapons](references-and-examples/weapons.md)
 * [Codeware callbacks](references-and-examples/codeware-callbacks/README.md)
