@@ -19,8 +19,6 @@ We will declare two classes: `Callback` to use with methods of a class, and `Sta
 #### Declaration
 
 ```swift
-import Codeware.*
-
 public class Callback extends DelayCallback {
   private let m_target: wref<IScriptable>;
   private let m_fn: CName;
