@@ -51,6 +51,12 @@ Codeware provides primitives for a lot of common UI components including pop ups
 
 Here's a simple pop up implemented using Codeware's `InGamePopup`with custom text&#x20;
 
+{% hint style="info" %}
+Remember to add this import:
+
+`import Codeware.UI.*`
+{% endhint %}
+
 ````swift
 ```
 public class MinimalPopup extends InGamePopup {
