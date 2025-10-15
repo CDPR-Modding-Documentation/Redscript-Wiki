@@ -18,11 +18,11 @@ You can find a list of existing UI layers on [.](./ "mention") -> [#inksystemlay
 To traverse a layer's children, you first need to get the corresponding layer's virtual window:
 
 ```swift
-private static func PrintLayerHierarchy(CName layerName) {
+private static func PrintLayerHierarchy(layerName: CName) {
     let window = GameInstance.GetInkSystem().GetLayer(layerName).GetVirtualWindow();
     let rootWidget = window.GetWidgetByPathName(n"Root") as inkCanvas;
     // The function LogWidgetTree is defined below
-    LogWidgetTree(n"DEBUG", baseHudRoot);
+    LogWidgetTree(n"DEBUG", rootWidget);
 }
 
 PrintLayerHierarchy(n"inkHUDLayer")
