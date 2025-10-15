@@ -2,8 +2,8 @@
 
 ## Summary
 
-**Published**: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
-**Last documented update**: Apr 15 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
+**Published**: Mar 31 2024 by [mana vortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
+**Last documented update**: Apr 15 2024 by [mana vortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
 
 This page will tell you how to log widget trees and layer trees.
 
@@ -22,7 +22,7 @@ private static func PrintLayerHierarchy(CName layerName) {
     let window = GameInstance.GetInkSystem().GetLayer(layerName).GetVirtualWindow();
     let rootWidget = window.GetWidgetByPathName(n"Root") as inkCanvas;
     // The function LogWidgetTree is defined below
-    LogChannelTree(n"DEBUG", baseHudRoot);
+    LogWidgetTree(n"DEBUG", baseHudRoot);
 }
 
 PrintLayerHierarchy(n"inkHUDLayer")
@@ -65,7 +65,7 @@ You can add this code to your [`logs.reds`](../logging.md) file:
         LogChannel(channel, s"\(indent)}");
       }
       if IsDefined(compChild) {
-        LogChannelTree(channel, compChild, props, s"\(indent)    ");
+        LogWidgetTree(channel, compChild, props, s"\(indent)    ");
       }
       i += 1;
     }
