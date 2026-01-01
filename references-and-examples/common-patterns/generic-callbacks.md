@@ -28,25 +28,25 @@ public class Callback extends DelayCallback {
                             fn: CName,
                             opt data: array<Variant>) -> ref<Callback> {
     let self = new Callback();
-
     self.m_target = target;
     self.m_fn = fn;
     self.m_data = data;
     return self;
   }
 
-  public func Call() {
+  public func Call() -> Variant {
     if !IsDefined(this.m_target) {
-      return;
+      return null;
     }
-    Reflection.GetClassOf(ToVariant(this.m_target))
-              .GetFunction(this.m_fn)
-              .Call(this.m_target, this.m_data);
+
+    return Reflection.GetClassOf(ToVariant(this.m_target))
+                     .GetFunction(this.m_fn)
+                     .Call(this.m_target, this.m_data);
   }
 
-  public func Call(data: array<Variant>) {
+  public func Call(data: array<Variant>) -> Variant {
     if !IsDefined(this.m_target) {
-      return;
+      return null;
     }
 
     let args = this.m_data;
@@ -54,9 +54,9 @@ public class Callback extends DelayCallback {
       ArrayPush(args, item);
     }
 
-    Reflection.GetClassOf(ToVariant(this.m_target))
-              .GetFunction(this.m_fn)
-              .Call(this.m_target, args);
+    return Reflection.GetClassOf(ToVariant(this.m_target))
+                     .GetFunction(this.m_fn)
+                     .Call(this.m_target, args);
   }
 }
 ```
@@ -64,6 +64,8 @@ public class Callback extends DelayCallback {
 We declare `Callback` which inherits [DelayCallback](https://nativedb.red4ext.com/DelayCallback). This way we can use `Callback` if we need it as-is, and we can also use it with [DelaySystem](https://nativedb.red4ext.com/DelaySystem).
 
 We implement the method `Call()` which is expected by DelaySystem / DelayCallback. If we want to use it without DelaySystem, we simply need to call `Call()` when we want to execute a callback by ourself.
+
+We return the result of the callback method as a `Variant`. User can convert the value by knowing the return type in advance, using [FromVariant](../../language/language-features/intrinsics.md).
 
 {% hint style="info" %}
 We declare an override of the `Call` method with an array of `Variant`. It allows to execute the callback and pass arguments in addition of the optional arguments defined when creating the callback (using `Create`).
@@ -112,24 +114,23 @@ public class StaticCallback extends DelayCallback {
 
   public static func Create(fn: CName, opt data: array<Variant>) -> ref<StaticCallback> {
     let self = new StaticCallback();
-
     self.m_fn = fn;
     self.m_data = data;
     return self;
   }
 
-  public func Call() {
-    Reflection.GetGlobalFunction(this.m_fn)
-              .Call(this.m_data);
+  public func Call() -> Variant {
+    return Reflection.GetGlobalFunction(this.m_fn)
+                     .Call(this.m_data);
   }
 
-  public func Call(data: array<Variant>) {
+  public func Call(data: array<Variant>) -> Variant {
     let args = this.m_data;
     for item in data {
       ArrayPush(args, item);
     }
-    Reflection.GetGlobalFunction(this.m_fn)
-              .Call(args);
+    return Reflection.GetGlobalFunction(this.m_fn)
+                     .Call(args);
   }
 }
 ```
