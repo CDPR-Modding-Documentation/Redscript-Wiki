@@ -2,7 +2,7 @@
 description: How to configure your setup
 ---
 
-# Setting up Redscript and VSCode
+# Setup for VSCode
 
 Created by [HJHughJanus](https://github.com/HJHughJanus) on [github](https://github.com/jac3km4/redscript/discussions/66), moved here for better maintainability
 
@@ -10,7 +10,7 @@ Created by [HJHughJanus](https://github.com/HJHughJanus) on [github](https://git
 
 1. Download redscript from [github](https://github.com/jac3km4/redscript/releases):
 
-<figure><img src="../.gitbook/assets/setup_redscript_download_github.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/setup_redscript_download_github.png" alt=""><figcaption></figcaption></figure>
 
 The zip file will contain the following folders:&#x20;
 
@@ -30,22 +30,18 @@ You can now put your redscript mods into `Cyberpunk 2077\r6\scripts` and they wi
 1. Download and install [VSCode](https://code.visualstudio.com/).
 2. After starting it, click on the Extensions icon in the left menu bar:
 
-<figure><img src="../.gitbook/assets/setup_redscript_vscode_extensions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/setup_redscript_vscode_extensions.png" alt=""><figcaption></figcaption></figure>
 
 3. Search for `redscript ide` and install the `Redscript IDE` extension.
 
 
 
-<div align="center">
-
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="center"><figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
 4. Click on the cog menu next to redscript-ide-vscode:
 5. Set up the path to your cyberpunk install in VS Code preferences.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-12-31 165919.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-12-31 165919.png" alt=""><figcaption></figcaption></figure>
 
 6. Save the settings
 
@@ -70,7 +66,7 @@ let testField: bool;
 6. You should see an error, because `bool` should be `Bool`.&#x20;
 7. Hover your cursor over the error, you should see something like this:
 
-<figure><img src="../.gitbook/assets/setup_redscript_test_tools" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/setup_redscript_test_tools" alt=""><figcaption></figcaption></figure>
 
 8. Correct the code:
 
@@ -82,7 +78,7 @@ let testField: Bool;
 
 9. Save again — everything should work now.
 
-If you want to make a redscript mod, you can check out [how-to-create-a-hook](../language/intro/how-to-create-a-hook/ "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
+If you want to make a redscript mod, you can check out [how-to-create-a-hook](../how-to-create-a-hook/ "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
 
 ## 4. Bundle with red-cli
 
@@ -127,7 +123,7 @@ Cocktail/
                 |-- Cocktail.Extensions.reds
 ```
 
-It helps quickly prepare your mod to release it. It also reduce the amount of scripts by merging them per module (see [module feature](../language/language-features/modules.md)). When the code is in the global scope (no module statement), it will merge scripts in `<name>.Global.reds`, with this example, in `Cocktail.Global.reds`.
+It helps quickly prepare your mod to release it. It also reduce the amount of scripts by merging them per module (see [module feature](../../language/modules.md)). When the code is in the global scope (no module statement), it will merge scripts in `<name>.Global.reds`, with this example, in `Cocktail.Global.reds`.
 
 If you have questions or feedback regarding this tool, please reach out in [red-cli](https://app.gitbook.com/s/BebXhPyeIAEOE4iqaLDr/) channel on Discord.
 

@@ -4,8 +4,8 @@ description: How to get shit done with strings
 
 # Strings
 
-* For how to enable logging, please see [logging.md](../../references-and-examples/logging.md "mention")
-* If you want to use strings for localization, check [utilities.md](../built-in-functions/utilities.md "mention") -> [#localization](../built-in-functions/utilities.md#localization "mention")
+* For how to enable logging, please see [logging.md](../references-and-examples/logging.md "mention")
+* If you want to use strings for localization, check [utilities.md](utility-functions/utilities.md "mention") -> [#localization](utility-functions/utilities.md#localization "mention")
 
 ## String interpolation
 

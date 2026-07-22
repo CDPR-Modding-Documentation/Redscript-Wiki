@@ -1,13 +1,37 @@
 # Things to hook
 
-Summary
+## Summary
 
-Published: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
-Last documented edit: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
+Published: Mar 31 2024 by [mana vortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
+Last documented edit: Jun 21 2026 by [Zhincore](https://app.gitbook.com/u/OsI9JXgCSSbt40hb327iBDif7Xv1 "mention")
 
-This page lists things that you can hook into (straight from the code of Addicted, thanks **Roms1383** for the contribution!)
 
-If you want to see an example, check [.](./ "mention") -> [#example](./#example "mention")
+
+If you want to see an example of a hook, see the guide:
+
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}
+
+If you wanna know more about available hooks see the reference page:
+
+{% content-ref url="../../language/hook-annotations.md" %}
+[hook-annotations.md](../../language/hook-annotations.md)
+{% endcontent-ref %}
+
+## Where to find things to hook?
+
+The best place to find what the game has to offer is NativeDB, using the copy icon you can get a ready to use wrapMethod snippet:
+
+{% embed url="https://nativedb.red4ext.com" %}
+
+If you want to know what you're wrapping under the hood, deep-dive into the decompiled scripts! They're included with the REDmod DLC in your game (`Cyberpunk 2077\tools\redmod\scripts`) and also on codeberg:
+
+{% embed url="https://codeberg.org/adamsmasher/cyberpunk" %}
+
+## Notable examples
+
+The following section lists stuff you could commonly want to hook into (straight from the code of Addicted, thanks **Roms1383** for the contribution!)
 
 ### Player Actions
 

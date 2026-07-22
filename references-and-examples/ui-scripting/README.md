@@ -6,15 +6,15 @@ description: Influencing Cyberpunk's UI with REDscript
 
 ## Summary
 
-**Published**: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
-**Last documented update**: Mar 31 2024 by [manavortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
+**Published**: Mar 31 2024 by [mana vortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
+**Last documented update**: Mar 31 2024 by [mana vortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")
 
 This page will tell you how to script the UI (turning widgets on and off).&#x20;
 
 ### Wait, this is not what I want!
 
 * For help on [logging-widget-trees.md](logging-widget-trees.md "mention"), check the corresponding wiki page!
-* You can find guides on how to add custom UI elements on [Codeware's github repo](https://github.com/psiberx/cp2077-codeware/wiki#layers-and-windows).
+* You can find guides on how to add custom UI elements in [InkWidgets](https://app.gitbook.com/s/fwsaoju1TBAUvMpI6NIw/how-do-i/inkwidgets "mention") or [Codeware's github wiki](https://github.com/psiberx/cp2077-codeware/wiki#layers-and-windows).
 
 ## General information
 
@@ -85,7 +85,7 @@ let hudMiddle2 = window.GetWidgetByPathName(n"Root/HUDMiddleWidget");
 ## Example
 
 {% hint style="info" %}
-This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](../../language/intro/how-to-create-a-hook/ "mention") or [codeware-callbacks](../codeware-callbacks/ "mention").
+This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](../../getting-started/how-to-create-a-hook/ "mention") or [Broken link](/broken/pages/o9ipwXllALBtup6cn3Ay "mention").
 {% endhint %}
 
 ```swift

@@ -1,5 +1,10 @@
 # Sleeping and Skipping Time
 
+### Summary <a href="#summary" id="summary"></a>
+
+Created: 2024 by [Dark Fortune Teller](https://app.gitbook.com/u/oK1B57ck9cT1uym9nRdxXkfqNKZ2 "mention")\
+Last documented edit: 2024 by [Dark Fortune Teller](https://app.gitbook.com/u/oK1B57ck9cT1uym9nRdxXkfqNKZ2 "mention")
+
 ## Differentiating Between Sleeping and Skip Time
 
 Sleeping in a bed and pressing "Skip Time" from the Hub Menu both utilize the Time Skip Popup, and fire the same events when completed. This can make it challenging to differentiate between whether or not the player has just finished "waiting", or if they slept in a bed.

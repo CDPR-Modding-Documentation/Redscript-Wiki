@@ -4,6 +4,11 @@ description: Cool stuff you can do with vehicles
 
 # Vehicle system
 
+### Summary <a href="#summary" id="summary"></a>
+
+Created: 2024 by [mana vortex](https://app.gitbook.com/u/NfZBoxGegfUqB33J9HXuCs6PVaC3 "mention")\
+Last documented edit: 2024 by [Mister Chedda](https://app.gitbook.com/u/st1pb8w90vS3tP5sLcR2qf5uda92 "mention"), [Louis Poirier](https://app.gitbook.com/u/THP8mqEctBeEN5HqGkVH1BqqM9j1 "mention")
+
 ### React to headlight changes
 
 ```swift

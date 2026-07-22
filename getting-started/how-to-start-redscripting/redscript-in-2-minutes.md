@@ -1,3 +1,7 @@
+---
+description: Learn REDscript directly from REDscript code! Get inspired, feel the vibe
+---
+
 # REDscript in 2 minutes
 
 ```swift
@@ -87,3 +91,17 @@ private final func ProcessCraftSkill(xpAmount: Int32, craftedItem: StatsObjectID
 }
 
 ```
+
+## Are you ready to start?
+
+Prepare your game and IDE:
+
+{% content-ref url="../setup/" %}
+[setup](../setup/)
+{% endcontent-ref %}
+
+After that let's roll:
+
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}

@@ -65,7 +65,7 @@ We declare `Callback` which inherits [DelayCallback](https://nativedb.red4ext.co
 
 We implement the method `Call()` which is expected by DelaySystem / DelayCallback. If we want to use it without DelaySystem, we simply need to call `Call()` when we want to execute a callback by ourself.
 
-We return the result of the callback method as a `Variant`. User can convert the value by knowing the return type in advance, using [FromVariant](../../language/language-features/intrinsics.md).
+We return the result of the callback method as a `Variant`. User can convert the value by knowing the return type in advance, using [FromVariant](../../language/intrinsics.md).
 
 {% hint style="info" %}
 We declare an override of the `Call` method with an array of `Variant`. It allows to execute the callback and pass arguments in addition of the optional arguments defined when creating the callback (using `Create`).

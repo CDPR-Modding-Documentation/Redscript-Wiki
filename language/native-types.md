@@ -2,7 +2,7 @@
 description: Built-in types available in the game runtime.
 ---
 
-# Built-in Types
+# Data Types
 
 ## Logical Types
 
@@ -35,7 +35,7 @@ UseNumber(Cast<Int8>(127),
 
 `String` values are stored internally as a null-terminated character array, unfortunately the bytecode doesn't support accessing the individual characters as an array.
 
-`CName` values are stored in-engine as a [64-bit hash key](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo\_hash\_function#FNV-1a\_hash) to a interned string pool. Class, function and field names are stored in the CName pool, so any methods that need a dynamic reference a scripted component will use a `CName` value.
+`CName` values are stored in-engine as a [64-bit hash key](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function#FNV-1a_hash) to a interned string pool. Class, function and field names are stored in the CName pool, so any methods that need a dynamic reference a scripted component will use a `CName` value.
 
 `ResRef` values are similar to `CName` values, except they specifically refer to archive resource files and presumably use a separate optimized string pool. Unlike `CName`, `ResRef` doesn't have any defined operators.
 
@@ -43,7 +43,7 @@ UseNumber(Cast<Int8>(127),
 
 ## Other Types
 
-<table data-header-hidden><thead><tr><th width="139" align="center">Keyword</th><th>Type</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td></tr><tr><td align="center"><code>Variant</code></td><td>A dynamic type that can store any other type</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="139" align="center">Keyword</th><th>Type</th></tr></thead><tbody><tr><td align="center">Keyword</td><td>Type</td></tr><tr><td align="center"><code>Variant</code></td><td>A dynamic type that can store any other type</td></tr><tr><td align="center"><code>array&#x3C;></code></td><td>A dynamic list of types with given type, e.g. <code>array&#x3C;Float></code></td></tr></tbody></table>
 
 ## Operators
 

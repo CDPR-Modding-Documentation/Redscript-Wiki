@@ -1,25 +1,19 @@
 # Home
 
-## What is redscript?
+## What is REDscript?
 
-Redscript is an open-source programming language and toolset designed to work natively with Cyberpunk 2077's scripting runtime. Redscript allows modders to write scripts that extend many features such as user-interface, combat balance, and NPC behavior.
+REDscript is an open-source programming language and toolset designed to work natively with Cyberpunk 2077's scripting runtime. REDscript allows modders to write scripts that extend and modify many features of the game such as user-interface, combat balance, NPC behavior, and more.
 
-## Quick Links
+It uses the file extension .reds (e.g. `MyMod.reds`). When .red files are placed in the `Cyberpunk 2077\r6\scripts` folder (or its subfolders), they get compiled and merged with the game's internal scripts on start.
 
-{% content-ref url="language/intro/" %}
-[intro](language/intro/)
+## Let's get started
+
+{% content-ref url="https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/getting-started" %}
+[Getting Started](https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/getting-started)
 {% endcontent-ref %}
 
-{% content-ref url="language/language-features/" %}
-[language-features](language/language-features/)
-{% endcontent-ref %}
-
-{% content-ref url="language/native-types.md" %}
-[native-types.md](language/native-types.md)
-{% endcontent-ref %}
-
-{% content-ref url="language/built-in-functions/" %}
-[built-in-functions](language/built-in-functions/)
+{% content-ref url="https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/language" %}
+[Language Reference](https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/language)
 {% endcontent-ref %}
 
 {% content-ref url="references-and-examples/common-patterns/" %}
@@ -30,4 +24,6 @@ Redscript is an open-source programming language and toolset designed to work na
 
 {% embed url="https://github.com/jac3km4/redscript" %}
 
-{% embed url="https://discord.com/invite/Epkq79kd96" %}
+{% embed url="https://www.nexusmods.com/cyberpunk2077/mods/1511" %}
+
+{% embed url="https://discord.gg/Epkq79kd96" %}

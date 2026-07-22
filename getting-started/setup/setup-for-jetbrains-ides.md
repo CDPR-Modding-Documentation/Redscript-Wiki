@@ -18,7 +18,7 @@ Please read through the entire guide first. If you still have issues to setup yo
 
 Open IntelliJ and create a blank project for now. Open **Settings** (CTRL + ALT + S) and select **Plugins**. In the **Marketplace** tab, search for `redscript`. It will show you the plugin made by pawrequest ([GitHub](https://github.com/pawrequest/redscript-intellij)). Select and install it. You'll need to restart IntelliJ to activate the plugin:
 
-<figure><img src="../.gitbook/assets/redscript-intellij-01-marketplace.png" alt=""><figcaption><p>Showcase IDE popup to install Redscript plugin</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/redscript-intellij-01-marketplace.png" alt=""><figcaption><p>Showcase IDE popup to install Redscript plugin</p></figcaption></figure>
 
 After IntelliJ restarted, go to **Settings** > **Tools** > **Redscript**. It will show you a field in the right panel.
 
@@ -30,7 +30,7 @@ This step is required to let the plugin and its Language Server know where to lo
 
 You might need to restart the Language Server after changing this setting. You can find Redscript Language Server and restart it like shown below:
 
-<figure><img src="../.gitbook/assets/redscript-intellij-02-lsp.png" alt=""><figcaption><p>Showcase how to restart Redscript Language Server</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/redscript-intellij-02-lsp.png" alt=""><figcaption><p>Showcase how to restart Redscript Language Server</p></figcaption></figure>
 
 If you have an issue, please do check this view.
 
@@ -86,7 +86,7 @@ You'll need to know one last step to be fully prepared to work on Redscript proj
 
 Open **Project structure...** (CTRL + ALT + SHIFT + S). In **Project Settings** select **Modules**. Click on button **+ Add Content Root** to open a popup and select where Codeware's scripts are installed in your environment (e.g. `<game>\red4ext\plugins\Codeware\Scripts`):
 
-<figure><img src="../.gitbook/assets/redscript-intellij-03-content-root.png" alt=""><figcaption><p>Showcase how to add scripts of a dependency</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/redscript-intellij-03-content-root.png" alt=""><figcaption><p>Showcase how to add scripts of a dependency</p></figcaption></figure>
 
 Validate changes and it will now provide syntax highlighting, auto-completion and go to declaration features for Codeware. You can repeat this step for any other mods you'd like to depend on, for example ArchiveXL / TweakXL / etc.
 

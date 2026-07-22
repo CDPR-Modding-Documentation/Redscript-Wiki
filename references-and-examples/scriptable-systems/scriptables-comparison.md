@@ -14,11 +14,11 @@ Class in base RedScript.
 * Can store things in a save
   * `persistent` properties will be saved in game's save file and value can differ between saves
 
-Example and documentation: [scriptable-systems-singletons.md](../common-patterns/scriptable-systems-singletons.md "mention")
+Example and documentation: [.](./ "mention")
 
 ## Codeware's `ScriptableService`
 
-Class added by [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) (Cannot be used without Codeware).
+Class added by [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) (cannot be used without Codeware).
 
 * Independent of saves
   * Is created when starting the game

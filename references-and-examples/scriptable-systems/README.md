@@ -1,4 +1,8 @@
-# Scriptable systems (singletons)
+---
+description: Run your code along with the game.
+---
+
+# Scriptable systems
 
 You can define a custom scriptable system:
 

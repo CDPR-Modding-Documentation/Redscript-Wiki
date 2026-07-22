@@ -1,45 +1,10 @@
 ---
-description: Creating a hook (with code snippets)
+description: Examples of creating hooks
 ---
 
 # How to create a hook
 
-Created by [HJHughJanus](https://github.com/HJHughJanus) on github, copied here for easier maintainability
-
-## What is a hook?
-
-### wrapMethod
-
-Also called wrapper function, this piece of code **hooks** into existing game functions.&#x20;
-
-{% hint style="info" %}
-The only exception from that rule are functions and classes marked with the **`native`** keyword.
-{% endhint %}
-
-You define those wrappers outside of your own class at the root level.
-
-To trigger the original callback, you need to call  `wrappedMethod(evt)` either before or after you did your own thing:
-
-```swift
-@wrapMethod(YourWrappingTarget)
-protected cb func OnSomethingHappens(originalEventParam: ref<SomeRef>) -> Bool {
-  wrappedMethod(originalEventParam);
-  // do stuff here
-}
-```
-
-### replaceMethod
-
-Opposed to a wrapped method, a replaced method will stop the original game function from doing anything.
-
-```swift
-@replaceMethod(YourWrappingTarget)
-protected cb func OnSomethingHappens(originalEventParam: ref<SomeRef>) -> Bool {
-  return false;
-}
-```
-
-## Things to hook
+Created by [HJHughJanus](https://github.com/HJHughJanus) on github, copied here for easier maintainability.
 
 ## **Example**
 
@@ -61,7 +26,7 @@ In this function I must now call the vanilla function first, so I don‘t overwr
 ```swift
 @wrapMethod(DamageSystem)
 private func ProcessLocalizedDamage(hitEvent: ref<gameHitEvent>) {
-wrappedMethod(hitEvent);
+    wrappedMethod(hitEvent);
 }
 ```
 
@@ -149,8 +114,22 @@ Now my actual code can take effect. Since I found the „ApplyRagdollImpulseEven
 
 The whole file now looks like this:
 
-<figure><img src="../../../.gitbook/assets/create_a_hook_final_file" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/create_a_hook_final_file" alt=""><figcaption></figcaption></figure>
 
 This file I save and then put into `D:\PATH\TO\CYBERPUNK2077\r6\scripts` so the game will load it.&#x20;
 
 When I start the game, every NPC hit by a bullet should be ragdolled with a push.
+
+## Where to go next?
+
+Understand what kind hooks are available:
+
+{% content-ref url="../../language/hook-annotations.md" %}
+[hook-annotations.md](../../language/hook-annotations.md)
+{% endcontent-ref %}
+
+Find what to hook:
+
+{% content-ref url="things-to-hook.md" %}
+[things-to-hook.md](things-to-hook.md)
+{% endcontent-ref %}
