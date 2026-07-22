@@ -21,7 +21,7 @@ If you don't know what to hook see:
 {% endcontent-ref %}
 
 {% hint style="warning" %}
-Annotations **can't** be used on modded methods or classes and native functions (those are marked as native and defined outside of scripts) and.
+Annotations **can't** be used on modded methods or classes and native functions (those are marked as native and defined outside of scripts).
 {% endhint %}
 
 {% hint style="info" %}

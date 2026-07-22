@@ -7,6 +7,7 @@
 * [Setup](getting-started/setup/README.md)
   * [Setup for VSCode](getting-started/setup/setup-for-vscode.md)
   * [Setup for JetBrains IDEs](getting-started/setup/setup-for-jetbrains-ides.md)
+  * [Setup for other editors](https://github.com/jac3km4/redscript-ide)
 * [How to start REDscripting](getting-started/how-to-start-redscripting/README.md)
   * [REDscript in 2 minutes](getting-started/how-to-start-redscripting/redscript-in-2-minutes.md)
 * [How to create a hook](getting-started/how-to-create-a-hook/README.md)

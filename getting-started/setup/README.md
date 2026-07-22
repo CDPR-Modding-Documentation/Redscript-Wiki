@@ -29,9 +29,9 @@ It is also highly recommended to install an extension to your favorite IDE:
 [setup-for-jetbrains-ides.md](setup-for-jetbrains-ides.md)
 {% endcontent-ref %}
 
-There is also an extension for ZED, simply download it in the extensions menu.
+For other IDEs checkout the README on redscript-ide GitHub page directly:
 
-
+{% embed url="https://github.com/jac3km4/redscript-ide" %}
 
 You can also [download the CLI](https://github.com/jac3km4/redscript/releases) (command-line interface) if you want to manually compile/decompile some REDscript code.
 
