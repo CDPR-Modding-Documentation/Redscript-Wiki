@@ -2,7 +2,7 @@
 description: Downloaded and prepared my IDE to do some scripting, what now?
 ---
 
-# How to start REDscripting
+# How to start REDscripting (deprecated)
 
 ### Summary <a href="#summary" id="summary"></a>
 
@@ -17,7 +17,7 @@ It is **discouraged** to develop directly in the game's folder, you should creat
 
 Now simply create a text file with the .reds extension, for example `MyMod.reds`. Then you're ready to code!
 
-In REDscript we are usually _injecting_ code using [hook annotations](../../language/hook-annotations.md). There is no "main" function, however, you can use [_scriptable classes_](../../references-and-examples/scriptable-systems/) to run your code, too.
+In REDscript we are usually _injecting_ code using [hook annotations](../../language/hook-annotations-deprecated.md). There is no "main" function, however, you can use [_scriptable classes_](../../references-and-examples/scriptable-systems-deprecated/) to run your code, too.
 
 {% code title="Example of basic hooking:" overflow="wrap" %}
 ```swift
@@ -31,10 +31,10 @@ private func ProcessLocalizedDamage(hitEvent: ref<gameHitEvent>) {
 
 This code wraps a method in the game's `DamageSystem` class, which allows us to run our code! The original method still runs thanks to the special `wrappedMethod` call, so we didn't break the game (yet).
 
-If you wanna see more examples of REDscript see [redscript-in-2-minutes.md](redscript-in-2-minutes.md "mention"):
+If you wanna see more examples of REDscript see [redscript-in-2-minutes-deprecated.md](redscript-in-2-minutes-deprecated.md "mention"):
 
-{% content-ref url="redscript-in-2-minutes.md" %}
-[redscript-in-2-minutes.md](redscript-in-2-minutes.md)
+{% content-ref url="redscript-in-2-minutes-deprecated.md" %}
+[redscript-in-2-minutes-deprecated.md](redscript-in-2-minutes-deprecated.md)
 {% endcontent-ref %}
 
 ## Developing a mod
@@ -62,12 +62,12 @@ You probably want to explore more of what REDscript does:
 
 If you want to interact with the game, you mostly want to hook up:
 
-{% content-ref url="../how-to-create-a-hook/" %}
-[how-to-create-a-hook](../how-to-create-a-hook/)
+{% content-ref url="../how-to-create-a-hook-deprecated/" %}
+[how-to-create-a-hook-deprecated](../how-to-create-a-hook-deprecated/)
 {% endcontent-ref %}
 
 Also checkout notable libraries, maybe they can help you towards your goal:
 
-{% content-ref url="../../references-and-examples/libraries.md" %}
-[libraries.md](../../references-and-examples/libraries.md)
+{% content-ref url="../../references-and-examples/libraries-deprecated.md" %}
+[libraries-deprecated.md](../../references-and-examples/libraries-deprecated.md)
 {% endcontent-ref %}

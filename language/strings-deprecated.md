@@ -2,10 +2,10 @@
 description: How to get shit done with strings
 ---
 
-# Strings
+# Strings (deprecated)
 
-* For how to enable logging, please see [logging.md](../references-and-examples/logging.md "mention")
-* If you want to use strings for localization, check [utilities.md](utility-functions/utilities.md "mention") -> [#localization](utility-functions/utilities.md#localization "mention")
+* For how to enable logging, please see [logging-deprecated.md](../references-and-examples/logging-deprecated.md "mention")
+* If you want to use strings for localization, check [utilities-deprecated.md](utility-functions-deprecated/utilities-deprecated.md "mention") -> [#localization](utility-functions-deprecated/utilities-deprecated.md#localization "mention")
 
 ## String interpolation
 
@@ -25,7 +25,7 @@ The compiler automatically converts expressions of any type other than `String` 
 
 ## String concatenation
 
-Via string addition overloads, you can simply use the `+` operator  to join strings with values of different types (such as `Int32` or `Float`) without using  [#string-conversions](strings.md#string-conversions "mention").
+Via string addition overloads, you can simply use the `+` operator  to join strings with values of different types (such as `Int32` or `Float`) without using  [#string-conversions](strings-deprecated.md#string-conversions "mention").
 
 ```swift
 // You can use addition to combine strings with integers, floats and several other types 
@@ -34,7 +34,7 @@ Log("My name is " + name + " and I am " + (year - birthYear) + " years old");
 
 ## String conversions
 
-Make sure to check [intrinsics.md](intrinsics.md "mention") for further conversions
+Make sure to check [intrinsics-deprecated.md](intrinsics-deprecated.md "mention") for further conversions
 
 ```swift
 native func NameToString(n: CName) -> String

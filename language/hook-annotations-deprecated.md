@@ -4,20 +4,20 @@ description: >-
   methods and classes in the base game.
 ---
 
-# Hook Annotations
+# Hook Annotations (Deprecated)
 
 Hook annotations allow you to hook into the game functions, monitor or change how they behave and add your own functionality.
 
 If you want to see how to create a hook, check following guide:
 
-{% content-ref url="../getting-started/how-to-create-a-hook/" %}
-[how-to-create-a-hook](../getting-started/how-to-create-a-hook/)
+{% content-ref url="../getting-started/how-to-create-a-hook-deprecated/" %}
+[how-to-create-a-hook-deprecated](../getting-started/how-to-create-a-hook-deprecated/)
 {% endcontent-ref %}
 
 If you don't know what to hook see:
 
-{% content-ref url="../getting-started/how-to-create-a-hook/things-to-hook.md" %}
-[things-to-hook.md](../getting-started/how-to-create-a-hook/things-to-hook.md)
+{% content-ref url="../getting-started/how-to-create-a-hook-deprecated/things-to-hook-deprecated.md" %}
+[things-to-hook-deprecated.md](../getting-started/how-to-create-a-hook-deprecated/things-to-hook-deprecated.md)
 {% endcontent-ref %}
 
 {% hint style="warning" %}
@@ -102,7 +102,7 @@ private final func DisassembleAllJunkItems() {
 
 Completely replaces the original method with your own.
 
-If possible you should prefer to use [#wrapmethod-class](hook-annotations.md#wrapmethod-class "mention") for compatibility.
+If possible you should prefer to use [#wrapmethod-class](hook-annotations-deprecated.md#wrapmethod-class "mention") for compatibility.
 
 <pre class="language-swift" data-overflow="wrap" data-line-numbers><code class="lang-swift">@replaceMethod(CraftingSystem)
 private final func ProcessCraftSkill(xpAmount: Int32, craftedItem: StatsObjectID) {

@@ -2,7 +2,7 @@
 description: Learn REDscript directly from REDscript code! Get inspired, feel the vibe
 ---
 
-# REDscript in 2 minutes
+# REDscript in 2 minutes (deprecated)
 
 ```swift
 // redscript allows line comments
@@ -96,8 +96,8 @@ private final func ProcessCraftSkill(xpAmount: Int32, craftedItem: StatsObjectID
 
 Prepare your game and IDE:
 
-{% content-ref url="../setup/" %}
-[setup](../setup/)
+{% content-ref url="../setup-deprecated/" %}
+[setup-deprecated](../setup-deprecated/)
 {% endcontent-ref %}
 
 After that let's roll:

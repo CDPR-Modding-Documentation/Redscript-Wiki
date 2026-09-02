@@ -1,4 +1,4 @@
-# Things to hook
+# Things to hook (deprecated)
 
 ## Summary
 
@@ -15,8 +15,8 @@ If you want to see an example of a hook, see the guide:
 
 If you wanna know more about available hooks see the reference page:
 
-{% content-ref url="../../language/hook-annotations.md" %}
-[hook-annotations.md](../../language/hook-annotations.md)
+{% content-ref url="../../language/hook-annotations-deprecated.md" %}
+[hook-annotations-deprecated.md](../../language/hook-annotations-deprecated.md)
 {% endcontent-ref %}
 
 ## Where to find things to hook?

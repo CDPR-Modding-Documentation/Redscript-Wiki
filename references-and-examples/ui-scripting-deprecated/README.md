@@ -2,7 +2,7 @@
 description: Influencing Cyberpunk's UI with REDscript
 ---
 
-# UI Scripting
+# UI Scripting (Deprecated)
 
 ## Summary
 
@@ -13,8 +13,8 @@ This page will tell you how to script the UI (turning widgets on and off).&#x20;
 
 ### Wait, this is not what I want!
 
-* For help on [logging-widget-trees.md](logging-widget-trees.md "mention"), check the corresponding wiki page!
-* You can find guides on how to add custom UI elements in [InkWidgets](https://app.gitbook.com/s/fwsaoju1TBAUvMpI6NIw/how-do-i/inkwidgets "mention") or [Codeware's github wiki](https://github.com/psiberx/cp2077-codeware/wiki#layers-and-windows).
+* For help on [logging-widget-trees-deprecated.md](logging-widget-trees-deprecated.md "mention"), check the corresponding wiki page!
+* You can find guides on how to add custom UI elements in [InkWidgets](https://app.gitbook.com/s/fwsaoju1TBAUvMpI6NIw/scripting-cyberpunk/using-scripts-for.../inkwidgets "mention") or [Codeware's github wiki](https://github.com/psiberx/cp2077-codeware/wiki#layers-and-windows).
 
 ## General information
 
@@ -85,7 +85,7 @@ let hudMiddle2 = window.GetWidgetByPathName(n"Root/HUDMiddleWidget");
 ## Example
 
 {% hint style="info" %}
-This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook](../../getting-started/how-to-create-a-hook/ "mention") or [Broken link](/broken/pages/o9ipwXllALBtup6cn3Ay "mention").
+This example only contains the scripting logic. For how to **trigger** the code, check either [how-to-create-a-hook-deprecated](../../getting-started/how-to-create-a-hook-deprecated/ "mention") or [Broken link](/broken/pages/o9ipwXllALBtup6cn3Ay "mention").
 {% endhint %}
 
 ```swift

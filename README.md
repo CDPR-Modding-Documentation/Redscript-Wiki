@@ -1,29 +1,14 @@
-# Home
+---
+description: This wiki has moved!
+---
 
-## What is REDscript?
+# Deprecation Notice
 
-REDscript is an open-source programming language and toolset designed to work natively with Cyberpunk 2077's scripting runtime. REDscript allows modders to write scripts that extend and modify many features of the game such as user-interface, combat balance, NPC behavior, and more.
+The various scripting wikis have been merged into a new wiki, please go there for documentation about Redscript, CET, or general information of how to interact with the game systems through scripting:
 
-It uses the file extension .reds (e.g. `MyMod.reds`). When .red files are placed in the `Cyberpunk 2077\r6\scripts` folder (or its subfolders), they get compiled and merged with the game's internal scripts on start.
-
-## Let's get started
-
-{% content-ref url="https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/getting-started" %}
-[Getting Started](https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/getting-started)
+{% content-ref url="https://app.gitbook.com/o/-MP5ijqI11FeeX7c8-N8/s/fwsaoju1TBAUvMpI6NIw/" %}
+[Scripting Cyberpunk](https://app.gitbook.com/o/-MP5ijqI11FeeX7c8-N8/s/fwsaoju1TBAUvMpI6NIw/)
 {% endcontent-ref %}
 
-{% content-ref url="https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/language" %}
-[Language Reference](https://app.gitbook.com/s/-McniwB8YOK2HnJ7SYg_/language)
-{% endcontent-ref %}
+The old pages for this wiki are kept alive as redirects to their location in the new wiki, however this wiki will no longer be updated.
 
-{% content-ref url="references-and-examples/common-patterns/" %}
-[common-patterns](references-and-examples/common-patterns/)
-{% endcontent-ref %}
-
-## Websites & Community
-
-{% embed url="https://github.com/jac3km4/redscript" %}
-
-{% embed url="https://www.nexusmods.com/cyberpunk2077/mods/1511" %}
-
-{% embed url="https://discord.gg/Epkq79kd96" %}

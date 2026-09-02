@@ -2,7 +2,7 @@
 description: How to configure your setup
 ---
 
-# Setup for VSCode
+# Setup for VSCode (deprecated)
 
 Created by [HJHughJanus](https://github.com/HJHughJanus) on [github](https://github.com/jac3km4/redscript/discussions/66), moved here for better maintainability
 
@@ -78,7 +78,7 @@ let testField: Bool;
 
 9. Save again — everything should work now.
 
-If you want to make a redscript mod, you can check out [how-to-create-a-hook](../how-to-create-a-hook/ "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
+If you want to make a redscript mod, you can check out [how-to-create-a-hook-deprecated](../how-to-create-a-hook-deprecated/ "mention") (originally by [HJHughJanus](https://github.com/HJHughJanus) on github)
 
 ## 4. Bundle with red-cli
 
@@ -123,7 +123,7 @@ Cocktail/
                 |-- Cocktail.Extensions.reds
 ```
 
-It helps quickly prepare your mod to release it. It also reduce the amount of scripts by merging them per module (see [module feature](../../language/modules.md)). When the code is in the global scope (no module statement), it will merge scripts in `<name>.Global.reds`, with this example, in `Cocktail.Global.reds`.
+It helps quickly prepare your mod to release it. It also reduce the amount of scripts by merging them per module (see [module feature](../../language/modules-deprecated.md)). When the code is in the global scope (no module statement), it will merge scripts in `<name>.Global.reds`, with this example, in `Cocktail.Global.reds`.
 
 If you have questions or feedback regarding this tool, please reach out in [red-cli](https://app.gitbook.com/s/BebXhPyeIAEOE4iqaLDr/) channel on Discord.
 

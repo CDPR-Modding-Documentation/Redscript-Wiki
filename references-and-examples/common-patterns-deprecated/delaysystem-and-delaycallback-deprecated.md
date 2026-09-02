@@ -1,4 +1,4 @@
-# DelaySystem and DelayCallback
+# DelaySystem and DelayCallback (Deprecated)
 
 [DelaySystem](https://nativedb.red4ext.com/DelaySystem) is a class that allows async call of [DelayCallback](https://nativedb.red4ext.com/DelayCallback) after the set amount of time has passed.
 
@@ -40,5 +40,5 @@ delaySystem.DelayCallback(CustomCallback.Create(inputInt), delay, isAffectedByTi
 ```
 
 {% hint style="info" %}
-You can take a look at [Generic callbacks](generic-callbacks.md) for more use cases.
+You can take a look at [Generic callbacks](generic-callbacks-deprecated.md) for more use cases.
 {% endhint %}

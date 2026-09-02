@@ -2,7 +2,7 @@
 description: Preparations for REDscripting.
 ---
 
-# Setup
+# Setup (deprecated)
 
 ### Summary <a href="#summary" id="summary"></a>
 
@@ -21,12 +21,12 @@ Download and install REDscript just like a regular user.&#x20;
 
 It is also highly recommended to install an extension to your favorite IDE:
 
-{% content-ref url="setup-for-vscode.md" %}
-[setup-for-vscode.md](setup-for-vscode.md)
+{% content-ref url="setup-for-vscode-deprecated.md" %}
+[setup-for-vscode-deprecated.md](setup-for-vscode-deprecated.md)
 {% endcontent-ref %}
 
-{% content-ref url="setup-for-jetbrains-ides.md" %}
-[setup-for-jetbrains-ides.md](setup-for-jetbrains-ides.md)
+{% content-ref url="setup-for-jetbrains-ides-deprecated.md" %}
+[setup-for-jetbrains-ides-deprecated.md](setup-for-jetbrains-ides-deprecated.md)
 {% endcontent-ref %}
 
 For other IDEs checkout the README on redscript-ide GitHub page directly:

@@ -2,15 +2,15 @@
 description: Examples of creating hooks
 ---
 
-# How to create a hook
+# How to create a hook (deprecated)
 
 Created by [HJHughJanus](https://github.com/HJHughJanus) on github, copied here for easier maintainability.
 
 ## **Example**
 
 _**Goal:**_ Ragdoll any NPC hit by a bullet.\
-&#xNAN;_**System:**_ I need to find out how Cyberpunk 2077 handles bullets and damage → a look through the decompiled game scripts shows there is a class called „DamageSystem“. This class looked up on Cyberdoc shows there is a function wihtin that class called „ProcessLocalizedDamage“. Back in the decompiled game scripts the code of this function seems to handle a „hit event“ and checking if the bullet hit the head or any weak spots. That is very close to my goal, so I will use this function for the hook.\
-&#xNAN;_**Functions:**_ I want to ragdoll an NPC, so I will need a function to do that. I search on Cyberdoc for „ragdoll“ and find something called „ApplyRagdollImpulseEvent“. I search this function in the decompiled game scripts to find out how it is used.
+_**System:**_ I need to find out how Cyberpunk 2077 handles bullets and damage → a look through the decompiled game scripts shows there is a class called „DamageSystem“. This class looked up on Cyberdoc shows there is a function wihtin that class called „ProcessLocalizedDamage“. Back in the decompiled game scripts the code of this function seems to handle a „hit event“ and checking if the bullet hit the head or any weak spots. That is very close to my goal, so I will use this function for the hook.\
+_**Functions:**_ I want to ragdoll an NPC, so I will need a function to do that. I search on Cyberdoc for „ragdoll“ and find something called „ApplyRagdollImpulseEvent“. I search this function in the decompiled game scripts to find out how it is used.
 
 \
 First, I need to specify which system I want to use for injection, then specify the function.
@@ -124,12 +124,12 @@ When I start the game, every NPC hit by a bullet should be ragdolled with a push
 
 Understand what kind hooks are available:
 
-{% content-ref url="../../language/hook-annotations.md" %}
-[hook-annotations.md](../../language/hook-annotations.md)
+{% content-ref url="../../language/hook-annotations-deprecated.md" %}
+[hook-annotations-deprecated.md](../../language/hook-annotations-deprecated.md)
 {% endcontent-ref %}
 
 Find what to hook:
 
-{% content-ref url="things-to-hook.md" %}
-[things-to-hook.md](things-to-hook.md)
+{% content-ref url="things-to-hook-deprecated.md" %}
+[things-to-hook-deprecated.md](things-to-hook-deprecated.md)
 {% endcontent-ref %}
