@@ -16,7 +16,7 @@
 
 ## Language Reference <a href="#language" id="language"></a>
 
-* [Data Types (deprecated)](language/native-types.md)
+* [Data Types (deprecated)](language/native-types-deprecated.md)
 * [Strings (deprecated)](language/strings-deprecated.md)
 * [Intrinsics (Deprecated)](language/intrinsics-deprecated.md)
 * [Loops (Deprecated)](language/loops-deprecated.md)
